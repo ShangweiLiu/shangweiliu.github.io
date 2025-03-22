@@ -12,7 +12,7 @@ site_theme               : "air"
 title                    : "Shangwei Liu Ph.D."
 title_separator          : "-"
 name                     : &name "Shangwei Liu"
-description              : &description "personal description"
+description              : &description #"personal description"
 url                      : "https://shangweiliu.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #repository               : "academicpages/academicpages.github.io"
@@ -22,7 +22,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "bio.webp"
   name             : "Shangwei Liu"
   pronouns         : # example: "she/her"  
   bio              : "Postdoctoral Research Fellow, Harvard Kennedy School"
@@ -299,12 +299,12 @@ timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+  #- jekyll-feed
+  #- jekyll-gist
+  #- jekyll-paginate
+  #- jekyll-sitemap
+  #- jekyll-redirect-from
+  #- jemoji
 
 # Mimic GitHub Pages with --safe
 whitelist:

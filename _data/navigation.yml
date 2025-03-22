@@ -13,7 +13,7 @@ main:
   - title: "Publication"
     url: /publication/
     
- - title: "Research"
+  - title: "Research"
     url: /research/
 
   - title: "Talks"

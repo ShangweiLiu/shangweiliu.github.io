@@ -2,6 +2,7 @@
 title: "刘尚炜"
 permalink: /cn/
 layout: single
+hide_footer: true
 ---
 
 我是哈佛大学肯尼迪政府学院贝尔福中心环境与自然资源项目以及科学、技术与公共政策项目的[博士后研究员](https://www.belfercenter.org/people/shangwei-liu)。

@@ -2,6 +2,7 @@
 title: "Publication"
 permalink: /publication/
 layout: single
+hide_footer: true
 ---
 
 ## Peer-Reviewed Publications

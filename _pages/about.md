@@ -1,13 +1,11 @@
 ---
 permalink: /
-title: "About"
+title: "Shangwei Liu"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-## About Me
 
 I am a [Postdoctoral Research Fellow](https://www.belfercenter.org/people/shangwei-liu) in the Belfer Center's [Environment and Natural Resources Program](https://www.belfercenter.org/programs/environment-and-natural-resources) and the [Science, Technology, and Public Policy Program](https://www.belfercenter.org/programs/science-technology-and-public-policy) at the [Harvard Kennedy School](https://www.hks.harvard.edu/).
 

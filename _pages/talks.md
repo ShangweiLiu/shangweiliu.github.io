@@ -4,11 +4,6 @@ permalink: /talks/
 layout: single
 ---
 
----
-title: "Talks"
-permalink: /talks/
-layout: single
----
 
 ## 2025
 

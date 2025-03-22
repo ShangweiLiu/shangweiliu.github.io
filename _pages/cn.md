@@ -4,9 +4,7 @@ permalink: /cn/
 layout: single
 ---
 
-## 关于我
-
-我目前是哈佛大学肯尼迪政府学院贝尔福中心环境与自然资源项目以及科学、技术与公共政策项目的[博士后研究员](https://www.belfercenter.org/people/shangwei-liu)。
+我是哈佛大学肯尼迪政府学院贝尔福中心环境与自然资源项目以及科学、技术与公共政策项目的[博士后研究员](https://www.belfercenter.org/people/shangwei-liu)。
 
 我的研究目标是推动基于科学的政策制定，以加速清洁能源技术的创新与推广，最大程度减少温室气体排放和社会成本，同时提升协同效益与公平性。
 

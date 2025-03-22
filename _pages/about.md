@@ -19,4 +19,4 @@ I conduct highly interdisciplinary work at the intersection of energy and enviro
 
 To answer these questions, I use macro energy system modeling, industrial ecology methods, and statistical and econometrics analysis.
 
-I received my Ph.D. in [Science, Technology, and Environmental Policy](https://cpree.princeton.edu/) from Princeton University, advised by [Denise Mauzerall](https://mauzerall.scholar.princeton.edu/).I received my Bachelor's degree in Environmental Science from Beijing Normal University in China. 
+I received my Ph.D. in [Science, Technology, and Environmental Policy](https://cpree.princeton.edu/) from Princeton University, advised by [Denise Mauzerall](https://mauzerall.scholar.princeton.edu/). I received my Bachelor's degree in Environmental Science from Beijing Normal University in China. 

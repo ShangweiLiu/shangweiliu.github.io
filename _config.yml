@@ -22,7 +22,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "bio.webp"
+  avatar           : "shanhwei_liu.jpg"
   name             : "Shangwei Liu"
   pronouns         : # example: "she/her"  
   bio              : "Postdoctoral Research Fellow, Harvard Kennedy School"
@@ -59,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : https://www.linkedin.com/in/shangwei-liu-72899411b/
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -67,7 +67,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : @shangwei_
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username

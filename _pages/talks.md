@@ -7,7 +7,10 @@ layout: single
 
 ## 2025
 
-- [Harvard University, Energy Policy Seminar](https://www.belfercenter.org/event/breaking-cost-escalation-curse-nuclear-power)
+- [Climate Week NYC 2025: The Role of Nuclear Energy in Decarbonization and Powering the AI Era](https://marxe.baruch.cuny.edu/nyc-climate-week-webinar/)
+- [MIT CEEPR Spring 2025 Workshop](https://ceepr.mit.edu/events/research-workshops/),invited speaker
+- [Harvard University, Harvard-China Project](https://chinaproject.harvard.edu/event/decarbonizing-chinas-building-sector), invited talk
+- [Harvard University, Energy Policy Seminar](https://www.belfercenter.org/event/breaking-cost-escalation-curse-nuclear-power), invited talk
 
 ---
 

@@ -13,7 +13,8 @@ We are recruiting 1 Ph.D. student, 1-2 postdocs, and 1-2 visiting students to jo
 
 
 
-PhD Students
+**PhD Students**
+
 Candidates should apply through the Ph.D. program in Civil and Environmental Engineering at the National University of Singapore. Please review the application instructions at https://nusgs.nus.edu.sg/programmes/phd-civil-and-environmental-engineeringand mention your interest in working with our group in your application. Full tuition and a competitive stipend will be provided. Students interested in starting in 2026 are strongly encouraged to reach out early to discuss potential research fit and directions.
 
 We are looking for self-motivated individuals who are:
@@ -32,7 +33,8 @@ Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.
 
 
 
-Postdocs
+**Postdocs**
+
 We are looking for postdoctoral researchers to join our growing lab starting Spring/Fall 2026, or at another mutually agreed time.
 
 Qualifications:
@@ -47,7 +49,8 @@ Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.
 
 
 
-Visiting Students/Scholars
+**Visiting Students/Scholars**
+
 Qualifications: Current PhD students in relevant fields or scholars with aligned research interests. Self-funded visitors are welcome. If you require support, please state your funding needs and potential sources in your materials.
 
 Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.harvard.eduwith the subject line “Visiting Students/Scholars – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests and plans during the visit; c) contact information for recommenders (names, affiliations, and email addresses).

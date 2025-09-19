@@ -16,7 +16,7 @@ I conduct highly interdisciplinary work at the intersection of energy and enviro
 
 **1.Decarbonization strategies**: How can we decarbonize the macro energy system effectively and efficiently?
 
-**2.Decarbonization impacts**: What are the consequences for households in terms of costs and well-being?
+**2.Decarbonization impacts**: What are the implications for households in terms of costs and well-being?
 
 **3.Technology innovation**: Why do some energy technologies succeed while others fail, and what drives cost reductions in clean energy technologies?
 

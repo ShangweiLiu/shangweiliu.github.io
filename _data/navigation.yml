@@ -31,6 +31,9 @@ main:
   - title: "CV"
     url: /cv/
 
+  - title: "Opportunities"
+    url: /opportunities/
+
   #- title: "中文"
   #  url: /cn/
     

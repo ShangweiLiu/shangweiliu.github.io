@@ -10,7 +10,7 @@ redirect_from:
 
 I am a [Postdoctoral Research Fellow](https://www.belfercenter.org/people/shangwei-liu) in the Belfer Center's [Environment and Natural Resources Program](https://www.belfercenter.org/programs/environment-and-natural-resources) and the [Science, Technology, and Public Policy Program](https://www.belfercenter.org/programs/science-technology-and-public-policy) at the [Harvard Kennedy School](https://www.hks.harvard.edu/).
 
-In 2026, I will join the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/) at the National University of Singapore as a tenure-track [Presidential Fellow](https://www.nus.edu.sg/careers/nus-programmes/). I will be recruiting PhD students, visiting students, and postdoctoral researchers starting 2026 Spring/Fall (formal ad coming soon).
+In 2026, I will join the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/) at the National University of Singapore as a tenure-track [Presidential Fellow](https://www.nus.edu.sg/careers/nus-programmes/). I will be recruiting PhD students, visiting students, and postdoctoral researchers starting 2026 Spring/Fall. See "Opportunities" for more!
 
 I conduct highly interdisciplinary work at the intersection of energy and environmental science, public policy, economics, and social science. My research is driven by three core questions:
 

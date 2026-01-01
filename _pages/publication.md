@@ -6,9 +6,9 @@ hide_footer: true
 ---
 
 
-**10.** **Shangwei Liu***, Gang He, Minghao Qiu, Daniel M. Kammen (2025). Can China break the ‘cost curse’ of nuclear power? *Nature*, 643: 1186–1188. [Link](https://www.nature.com/articles/d41586-025-02341-z)  
-Coverage: [New York Times](https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html), [The Economist](https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry)[Harvard Belfer](https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power), [CUNY](https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs), [JHU](https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/)  
-[My comment for Roosevelt Institute](https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/)  
+**10.** **Shangwei Liu**, Gang He, Minghao Qiu, Daniel M. Kammen (2025). Can China break the ‘cost curse’ of nuclear power?  *Nature*, 643: 1186–1188. [Link](https://www.nature.com/articles/d41586-025-02341-z)  
+Coverage: [New York Times](https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html), [The Economist], (https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry)[Harvard Belfer](https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power), [CUNY](https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs), [JHU](https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/)  
+[My comment blog for Roosevelt Institute](https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/)  
 Social media (X, Facebook, etc.): millions of views, wide discussion
 
 **9.** Bo Li, Ruotao Yu, Kaiye Gan, Guangchun Ruan, Wei Dai, **Shangwei Liu**, Mingxia Yang, Haiwang Zhong (2025). A Large-Scale Residential Load Dataset in Extreme Weather Events: A Case in Southern China. *Scientific Data*, 12, 450. [Link](https://doi.org/10.1038/s41597-025-04766-7)

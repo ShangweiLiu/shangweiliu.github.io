@@ -29,7 +29,7 @@ We are looking for self-motivated individuals who are:
 
 5. Skilled in scientific writing and communication in English.
 
-Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.harvard.edu with the subject line “PhD – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests, prior research experience and skills, and career goals; c) contact information for recommenders (names, affiliations, and email addresses).
+Interested candidates are welcome to email Dr. Shangwei Liu at shangweiliu@nus.edu.sg with the subject line “PhD – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests, prior research experience and skills, and career goals; c) contact information for recommenders (names, affiliations, and email addresses).
 
 
 
@@ -45,7 +45,7 @@ Qualifications:
 
 3. Preferred research skills: integrated assessment modeling, energy systems modeling, industrial ecology methods, techno-economic analysis, econometrics, optimization, statistical analysis.
 
-Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.harvard.edu with the subject line “Postdoc – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests, prior research experience and skills, and career goals; c) contact information for recommenders (names, affiliations, and email addresses); d) one first-author paper.
+Interested candidates are welcome to email Dr. Shangwei Liu at shangweiliu@nus.edu.sg with the subject line “Postdoc – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests, prior research experience and skills, and career goals; c) contact information for recommenders (names, affiliations, and email addresses); d) one first-author paper.
 
 
 
@@ -53,4 +53,4 @@ Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.
 
 Qualifications: Current PhD students in relevant fields or scholars with aligned research interests. Self-funded visitors are welcome. If you require support, please state your funding needs and potential sources in your materials.
 
-Interested candidates are welcome to email Dr. Shangwei Liu at shangwei_liu@hks.harvard.eduwith the subject line “Visiting Students/Scholars – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests and plans during the visit; c) contact information for recommenders (names, affiliations, and email addresses).
+Interested candidates are welcome to email Dr. Shangwei Liu at shangweiliu@nus.edu.sg with the subject line “Visiting Students/Scholars – [Your Full Name] – 2026.” Include: a) your academic CV; b) a brief statement describing your research interests and plans during the visit; c) contact information for recommenders (names, affiliations, and email addresses).

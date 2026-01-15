@@ -69,7 +69,6 @@ hide_footer: true
       <li><strong>Shangwei Liu</strong>, Xin Tian, Wenjia Cai, Weiqiang Chen, Yafei Wang (2018). How the transitions in iron and steel and construction material industries impact China's CO2 emissions: comprehensive analysis from an inter-sector linked perspective. <em>Applied Energy</em>, 211, 64–75. <a href="https://doi.org/10.1016/j.apenergy.2017.11.040">Link</a></li>
     </ol>
   </div>
-  </div>
 </div>
 
 <style>

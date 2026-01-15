@@ -16,10 +16,3 @@ Dr. Liu received his Ph.D. in [Science, Technology, and Environmental Policy](ht
 
 Dr. Liu is recruiting Ph.D. students, visiting students, and postdoctoral researchers for positions starting in Spring or Fall 2026. Please see the “Opportunities” page for details.
 
-<style>
-.author__avatar img {
-  width: 200px !important;
-  height: auto !important;
-}
-</style>
-

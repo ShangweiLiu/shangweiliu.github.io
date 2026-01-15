@@ -14,19 +14,19 @@ hide_footer: true
   <div class="tab-content" id="content1">
     <h3>Selected Publications</h3>
     <div class="publication-item">
-      <img src="/images/nature_nuclear.jpg" alt="Nature Nuclear Power" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/publication/nature_key_fig.png" alt="Nature Nuclear Power" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2025). Can China break the ‘cost curse’ of nuclear power? *Nature*</strong><br>
       This paper analyzes China's nuclear power development strategy and potential to reduce costs. [Link](https://www.nature.com/articles/d41586-025-02341-z)</p>
       <div style="clear:both;"></div>
     </div>
     <div class="publication-item">
-      <img src="/images/nature_energy.jpg" alt="Nature Energy" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/publication/ne_chp.png" alt="Nature Energy" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2024). Diversifying heat sources... *Nature Energy*</strong><br>
       Explores diversifying urban heating systems in China to reduce carbon lock-in. [Link](https://www.nature.com/articles/s41560-024-01560-4)</p>
       <div style="clear:both;"></div>
     </div>
     <div class="publication-item">
-      <img src="/images/est_building.jpg" alt="Environmental Science & Technology" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/publication/est_envelope.jpeg" alt="Environmental Science & Technology" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2023). Improving building envelope efficiency... *Environmental Science & Technology*</strong><br>
       Focuses on efficiency improvements in rural residential heating in China. [Link](https://doi.org/10.1021/acs.est.2c06863)</p>
       <div style="clear:both;"></div>
@@ -36,31 +36,33 @@ hide_footer: true
   
   <div class="tab-content" id="content2">
     <h3>All Publications</h3>
-
-**10.** **Shangwei Liu**, Gang He, Minghao Qiu, Daniel M. Kammen (2025). Can China break the ‘cost curse’ of nuclear power?  *Nature*, 643: 1186–1188. [Link](https://www.nature.com/articles/d41586-025-02341-z)  
-Coverage: [New York Times](https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html), [The Economist](https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry), [Harvard Belfer](https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power), [CUNY](https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs), [JHU](https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/)  
-[My comment blog for Roosevelt Institute](https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/)  
-Social media (X, Facebook, etc.): millions of views, wide discussion
-
-**9.** Bo Li, Ruotao Yu, Kaiye Gan, Guangchun Ruan, Wei Dai, **Shangwei Liu**, Mingxia Yang, Haiwang Zhong (2025). A Large-Scale Residential Load Dataset in Extreme Weather Events: A Case in Southern China. *Scientific Data*, 12, 450. [Link](https://doi.org/10.1038/s41597-025-04766-7)
-
-**8.** Jing Liang, Yueming (Lucy) Qiu, Bo Wang, Xingchi Shen, **Shangwei Liu** (2025). Impacts of heatwaves on electricity reliability: Evidence from power outage data in China. *iScience*, 111855. [Link](https://www.cell.com/iscience/fulltext/S2589-0042(25)00115-4)
-
-**7.** **Shangwei Liu**, Yang Guo, Fabian Wagner, Hongxun Liu, Ryna Yiyun Cui, Denise L. Mauzerall (2024). Diversifying heat sources in China's urban district heating systems will reduce risk of carbon lock-in. *Nature Energy*, 9, 1021–1031. [Link](https://www.nature.com/articles/s41560-024-01560-4)  
-Coverage: [Princeton SPIA](https://cpree.princeton.edu/news/2024/diversifying-china%E2%80%99s-urban-heating-systems-will-reduce-risk-carbon-lock)  
-Policy brief submitted to China’s State Council
-
-**6.** **Shangwei Liu**, Hongxun Liu, Denise L. Mauzerall (2023). Improving building envelope efficiency lowers costs and emissions from rural residential heating in China. *Environmental Science & Technology*, 57, 595–605. [Link](https://doi.org/10.1021/acs.est.2c06863)
-
-**5.** Liqun Peng, Yang Guo, **Shangwei Liu**, Gang He, Denise L. Mauzerall (2024). Subsidizing grid-based electrolytic hydrogen could increase GHG emissions in coal dominated power systems. *Environmental Science & Technology*, 58(12), 5187–5195. [Link](https://pubs.acs.org/doi/full/10.1021/acs.est.3c03045)
-
-**4.** **Shangwei Liu**, Xin Tian, Yiling Xiong, Yan Zhang, Hiroki Tanikawa (2020). Challenges towards carbon dioxide emissions peak under in-depth socioeconomic transition in China: Insights from Shanghai. *Journal of Cleaner Production*, 247, 119083. [Link](https://doi.org/10.1016/j.jclepro.2019.119083)
-
-**3.** Yiling Xiong, Xin Tian, **Shangwei Liu**, Zhipeng Tang (2020). New patterns in China's water footprint: analysis of spatial and structural transitions from a regional perspective. *Journal of Cleaner Production*, 245, 118942. [Link](https://doi.org/10.1016/j.jclepro.2019.118942)
-
-**2.** Jie Wang, Yiling Xiong, Xin Tian, **Shangwei Liu**, Jiashuo Li, Hiroki Tanikawa (2018). Stagnating CO2 emissions with in-depth socioeconomic transition in Beijing. *Applied Energy*, 228, 1714–1725. [Link](https://doi.org/10.1016/j.apenergy.2018.07.029)
-
-**1.** **Shangwei Liu**, Xin Tian, Wenjia Cai, Weiqiang Chen, Yafei Wang (2018). How the transitions in iron and steel and construction material industries impact China's CO2 emissions: comprehensive analysis from an inter-sector linked perspective. *Applied Energy*, 211, 64–75. [Link](https://doi.org/10.1016/j.apenergy.2017.11.040)
+    <ol reversed>
+      <li><strong>Shangwei Liu</strong>, Gang He, Minghao Qiu, Daniel M. Kammen (2025). Can China break the ‘cost curse’ of nuclear power? <em>Nature</em>, 643: 1186–1188. <a href="https://www.nature.com/articles/d41586-025-02341-z">Link</a><br>
+      Coverage: <a href="https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html">New York Times</a>, <a href="https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry">The Economist</a>, <a href="https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power">Harvard Belfer</a>, <a href="https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs">CUNY</a>, <a href="https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/">JHU</a><br>
+      <a href="https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/">My comment blog for Roosevelt Institute</a><br>
+      Social media (X, Facebook, etc.): millions of views, wide discussion</li>
+      
+      <li>Bo Li, Ruotao Yu, Kaiye Gan, Guangchun Ruan, Wei Dai, <strong>Shangwei Liu</strong>, Mingxia Yang, Haiwang Zhong (2025). A Large-Scale Residential Load Dataset in Extreme Weather Events: A Case in Southern China. <em>Scientific Data</em>, 12, 450. <a href="https://doi.org/10.1038/s41597-025-04766-7">Link</a></li>
+      
+      <li>Jing Liang, Yueming (Lucy) Qiu, Bo Wang, Xingchi Shen, <strong>Shangwei Liu</strong> (2025). Impacts of heatwaves on electricity reliability: Evidence from power outage data in China. <em>iScience</em>, 111855. <a href="https://www.cell.com/iscience/fulltext/S2589-0042(25)00115-4">Link</a></li>
+      
+      <li><strong>Shangwei Liu</strong>, Yang Guo, Fabian Wagner, Hongxun Liu, Ryna Yiyun Cui, Denise L. Mauzerall (2024). Diversifying heat sources in China's urban district heating systems will reduce risk of carbon lock-in. <em>Nature Energy</em>, 9, 1021–1031. <a href="https://www.nature.com/articles/s41560-024-01560-4">Link</a><br>
+      Coverage: <a href="https://cpree.princeton.edu/news/2024/diversifying-china%E2%80%99s-urban-heating-systems-will-reduce-risk-carbon-lock">Princeton SPIA</a><br>
+      Policy brief submitted to China’s State Council</li>
+      
+      <li><strong>Shangwei Liu</strong>, Hongxun Liu, Denise L. Mauzerall (2023). Improving building envelope efficiency lowers costs and emissions from rural residential heating in China. <em>Environmental Science & Technology</em>, 57, 595–605. <a href="https://doi.org/10.1021/acs.est.2c06863">Link</a></li>
+      
+      <li>Liqun Peng, Yang Guo, <strong>Shangwei Liu</strong>, Gang He, Denise L. Mauzerall (2024). Subsidizing grid-based electrolytic hydrogen could increase GHG emissions in coal dominated power systems. <em>Environmental Science & Technology</em>, 58(12), 5187–5195. <a href="https://pubs.acs.org/doi/full/10.1021/acs.est.3c03045">Link</a></li>
+      
+      <li><strong>Shangwei Liu</strong>, Xin Tian, Yiling Xiong, Yan Zhang, Hiroki Tanikawa (2020). Challenges towards carbon dioxide emissions peak under in-depth socioeconomic transition in China: Insights from Shanghai. <em>Journal of Cleaner Production</em>, 247, 119083. <a href="https://doi.org/10.1016/j.jclepro.2019.119083">Link</a></li>
+      
+      <li>Yiling Xiong, Xin Tian, <strong>Shangwei Liu</strong>, Zhipeng Tang (2020). New patterns in China's water footprint: analysis of spatial and structural transitions from a regional perspective. <em>Journal of Cleaner Production</em>, 245, 118942. <a href="https://doi.org/10.1016/j.jclepro.2019.118942">Link</a></li>
+      
+      <li>Jie Wang, Yiling Xiong, Xin Tian, <strong>Shangwei Liu</strong>, Jiashuo Li, Hiroki Tanikawa (2018). Stagnating CO2 emissions with in-depth socioeconomic transition in Beijing. <em>Applied Energy</em>, 228, 1714–1725. <a href="https://doi.org/10.1016/j.apenergy.2018.07.029">Link</a></li>
+      
+      <li><strong>Shangwei Liu</strong>, Xin Tian, Wenjia Cai, Weiqiang Chen, Yafei Wang (2018). How the transitions in iron and steel and construction material industries impact China's CO2 emissions: comprehensive analysis from an inter-sector linked perspective. <em>Applied Energy</em>, 211, 64–75. <a href="https://doi.org/10.1016/j.apenergy.2017.11.040">Link</a></li>
+    </ol>
+  </div>
   </div>
 </div>
 

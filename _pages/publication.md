@@ -14,24 +14,26 @@ hide_footer: true
   <div class="tab-content" id="content1">
     <h3>Selected Publications</h3>
     <div class="publication-item">
-      <img src="/images/publication1.jpg" alt="Publication 1" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/nature_nuclear.jpg" alt="Nature Nuclear Power" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2025). Can China break the ‘cost curse’ of nuclear power? *Nature*</strong><br>
-      Description of the paper. [Link](https://www.nature.com/articles/d41586-025-02341-z)</p>
+      This paper analyzes China's nuclear power development strategy and potential to reduce costs. [Link](https://www.nature.com/articles/d41586-025-02341-z)</p>
       <div style="clear:both;"></div>
     </div>
     <div class="publication-item">
-      <img src="/images/publication2.jpg" alt="Publication 2" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/nature_energy.jpg" alt="Nature Energy" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2024). Diversifying heat sources... *Nature Energy*</strong><br>
-      Description. [Link](https://www.nature.com/articles/s41560-024-01560-4)</p>
+      Explores diversifying urban heating systems in China to reduce carbon lock-in. [Link](https://www.nature.com/articles/s41560-024-01560-4)</p>
+      <div style="clear:both;"></div>
+    </div>
+    <div class="publication-item">
+      <img src="/images/est_building.jpg" alt="Environmental Science & Technology" style="width:200px; float:left; margin-right:10px;">
+      <p><strong>Shangwei Liu et al. (2023). Improving building envelope efficiency... *Environmental Science & Technology*</strong><br>
+      Focuses on efficiency improvements in rural residential heating in China. [Link](https://doi.org/10.1021/acs.est.2c06863)</p>
       <div style="clear:both;"></div>
     </div>
     <!-- Add more selected publications with images -->
   </div>
   
-  <div class="tab-content" id="content2">
-    <h3>All Publications</h3>
-
-
   <div class="tab-content" id="content2">
     <h3>All Publications</h3>
 

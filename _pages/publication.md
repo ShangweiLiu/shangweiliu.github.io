@@ -14,7 +14,7 @@ hide_footer: true
   <div class="tab-content" id="content1">
     <h3>Selected Publications</h3>
     <div class="publication-item">
-      <img src="/images/publication/nature_key_fig.png" alt="Nature Nuclear Power" style="width:200px; float:left; margin-right:10px;">
+      <img src="/images/publication/nuclear_key_fig.png" alt="Nature Nuclear Power" style="width:200px; float:left; margin-right:10px;">
       <p><strong>Shangwei Liu et al. (2025). Can China break the ‘cost curse’ of nuclear power? *Nature*</strong><br>
       This paper analyzes China's nuclear power development strategy and potential to reduce costs. [Link](https://www.nature.com/articles/d41586-025-02341-z)</p>
       <div style="clear:both;"></div>

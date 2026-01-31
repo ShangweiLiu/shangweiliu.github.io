@@ -25,7 +25,7 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(2.5 of 12);  // Wider sidebar for better avatar display
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -36,7 +36,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    max-width: 300px;  // Increased from 250px
     padding-right: 0;
   }
 
@@ -94,7 +94,7 @@
   }
 
   img {
-    max-width: 220px;
+    max-width: 280px;  // Increased for wider sidebar
     border-radius: 0;
 
     @include breakpoint($large) {

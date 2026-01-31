@@ -14,5 +14,11 @@ Dr. Liu’s research focuses on energy and climate policy, with an emphasis on b
 
 Dr. Liu received his Ph.D. in [Science, Technology, and Environmental Policy](https://cpree.princeton.edu/) from Princeton University, where he was advised by [Denise Mauzerall](https://mauzerall.scholar.princeton.edu/). He holds a Bachelor’s degree in Environmental Science from Beijing Normal University.
 
-Dr. Liu is recruiting Ph.D. students, visiting students, and postdoctoral researchers for positions starting in Spring or Fall 2026. Please see the “Opportunities” page for details.
+Dr. Liu is recruiting Ph.D. students, visiting students, and postdoctoral researchers for positions starting in Spring or Fall 2026. Please see the "Opportunities" page for details.
+
+---
+
+## Recent News
+
+<!-- Add news items below, newest first -->
 

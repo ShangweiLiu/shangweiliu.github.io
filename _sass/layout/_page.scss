@@ -34,6 +34,16 @@
   }
 }
 
+.page--no-sidebar {
+  @include breakpoint($large) {
+    float: none;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;

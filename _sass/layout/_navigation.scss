@@ -205,7 +205,7 @@
   .visible-links {
     display: table;
 
-    li {
+    > li {  // Direct children only, not nested li in dropdowns
       display: table-cell;
       vertical-align: middle;
 

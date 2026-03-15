@@ -18,7 +18,7 @@ hide_footer: true
       <p><strong>Shangwei Liu</strong>, Gang He, Minghao Qiu, Daniel M. Kammen (2025). Can China break the ‘cost curse’ of nuclear power? <em>Nature</em>, 643: 1186–1188. <a href="https://www.nature.com/articles/d41586-025-02341-z">Link</a><br>
       Coverage: <a href="https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html">New York Times</a>, <a href="https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry">The Economist</a>, <a href="https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power">Harvard Belfer</a>, <a href="https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs">CUNY</a>, <a href="https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/">JHU</a><br>
       <a href="https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/">My comment blog for Roosevelt Institute</a><br>
-      Social media (X, Facebook, etc.): millions of views, wide discussion</p>
+      Our paper received millions of views and wide discussion on social media.</p>
       <div style="clear:both;"></div>
     </div>
     <div class="publication-item">

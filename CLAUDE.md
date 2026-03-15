@@ -18,6 +18,8 @@ npm run build:js
 npm run watch:js
 ```
 
+Note: `_config.yml` is NOT live-reloaded—restart the server after editing it.
+
 ## Content Generation
 
 Publications and talks are data-driven from TSV files:
@@ -36,28 +38,40 @@ python3 markdown_generator/talks.py
 python3 talkmap.py
 ```
 
+### TSV Format (publications.tsv)
+Required columns: `pub_date` (YYYY-MM-DD), `title`, `venue`, `excerpt`, `citation`, `site_url`, `paper_url`, `url_slug`. Generated files are named `YYYY-MM-DD-[url_slug].md`.
+
+### Publication Categories
+Defined in `_config.yml` under `publication_category`: `books` (Books), `manuscripts` (Journal Articles), `conferences` (Conference Papers). Each publication's front matter `category` field must match one of these keys.
+
+### Publication Views
+Two views exist: "Selected" (`_pages/publication-selected.md`) and "All" (`_pages/publication-all.md`). Selected publications are filtered by `selected: true` in front matter.
+
 ## Architecture
 
-This is a Jekyll-based academic portfolio website using a customized Minimal Mistakes theme.
+Jekyll-based academic portfolio site using a customized Academic Pages / Minimal Mistakes theme (theme: `air`).
 
 ### Content Collections
 - `_publications/` - Research papers (categories: books, manuscripts, conferences)
 - `_talks/` - Speaking engagements with geolocation data
 - `_teaching/` - Teaching activities
-- `_pages/` - Static pages (cv.md, publication.md, talks.md)
+- `_pages/` - Static pages (about, cv, publication, talks, opportunities)
 
 ### Data Flow
 1. Source data in `markdown_generator/publications.tsv` and `markdown_generator/talks.tsv`
-2. Python scripts generate individual markdown files with front matter
+2. Python scripts generate individual markdown files with front matter into `_publications/` and `_talks/`
 3. Jekyll builds static HTML from markdown + Liquid templates
-4. GitHub Actions auto-runs talkmap notebook on push to talks/
+4. GitHub Actions auto-runs talkmap notebook on push to `talks/` or `talkmap.ipynb`
 
 ### Key Configuration
-- `_config.yml` - Main Jekyll config (site metadata, collections, author info)
-- `_data/navigation.yml` - Site navigation structure
-- `_data/cv_archive.json` - Structured CV data
+- `_config.yml` - Main Jekyll config (site metadata, collections, author info, publication categories)
+- `_data/navigation.yml` - Site navigation structure (supports dropdown children for sub-pages)
+- `_data/cv_archive.json` - Structured CV data (generated via `scripts/update_cv_json.sh`)
 
 ### Templates
 - `_layouts/` - Page layouts (default, single, archive, cv-layout, talk)
-- `_includes/` - Reusable components (author-profile, archive-single variants)
-- `_sass/` - SCSS stylesheets
+- `_includes/` - Reusable components (author-profile, archive-single variants for publications/talks/CV)
+- `_sass/` - SCSS stylesheets; site-level overrides go in `_sass/_themes.scss` or `_sass/layout/`
+
+### Styling
+SCSS structure: `_sass/_themes.scss` for theme variables, `_sass/layout/` for component styles, `_sass/vendor/` for third-party (font-awesome, susy grid, breakpoint, magnific-popup). The site theme is set to `air` in `_config.yml`.

@@ -5,7 +5,7 @@ layout: single
 hide_footer: true
 ---
 
-Our lab in the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/) at NUS conducts interdisciplinary research on energy and climate policy, combining engineering-based modeling with policy and economic analysis. We are currently expanding our research on decarbonization pathways in Southeast Asia, with a focus on net-zero transitions and their environmental impacts.
+Our lab in the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/) at NUS conducts interdisciplinary research on energy and climate policy, combining engineering-based modeling with policy and economic analysis. We are currently ramping up our research on decarbonization pathways and their environmental implications in Southeast Asia.
 
 If you are interested in joining us, please email Dr. Shangwei Liu at [shangweiliu@nus.edu.sg](mailto:shangweiliu@nus.edu.sg) with your CV attached. Please use the subject line format: **"Position + Current Affiliation + Name"** (e.g., "PhD – NUS – Jane Doe").
 

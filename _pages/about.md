@@ -13,8 +13,6 @@ My research focuses on energy and climate policy that combines engineering-based
 
 A bit about my personal academic journey: I didn’t actually choose environmental science for undergrad. Back in high school, I aspired to be a social scientist or a historian of ancient China. But I was assigned to environmental science after the college entrance exam (gaokao). I tried working in wet labs but I was very bad at experiments. It was when I started research in industrial ecology and environmental policy that something clicked, and I realized I could combine public policy with engineering-style research. So I pursued my Ph.D. and did my postdoc at the public policy schools at Princeton and Harvard. At NUS, my lab aims to bridge the gap between engineers and policy/economic analysts, and train the next generation of energy scientists and environmentalists with system thinking across disciplines to address the grand global challenges of sustainability.
 
-We are now recruiting postdoctoral researchers, visiting students (starting 2026) and Ph.D. students (starting in Spring or Fall 2027). Please see the "Opportunities" page for details.
-
 ---
 
 ## Recent News

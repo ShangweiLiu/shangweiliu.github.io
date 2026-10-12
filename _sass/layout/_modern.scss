@@ -15,7 +15,7 @@ $content-width : 1140px;
 :root {
   --nus-blue                         : #{$nus-blue};
   --nus-orange                       : #{$nus-orange};
-  --paper                            : #fbfaf7;
+  --paper                            : #ffffff;
   --ink                              : #14213d;
   --ink-2                            : #3b4660;
   --ink-3                            : #6b7385;
@@ -726,13 +726,19 @@ a {
 }
 
 /* Footer
+   NUS blue band, so the page ends on the university's colour.
    ========================================================================== */
 
 .site-footer {
+  --footer-bg   : #{$nus-blue};
+  --footer-text : rgba(255, 255, 255, 0.82);
+  --footer-dim  : rgba(255, 255, 255, 0.6);
+  --footer-rule : rgba(255, 255, 255, 0.18);
+
   margin-top: 3.5rem;
-  border-top: 1px solid var(--rule);
+  background: var(--footer-bg);
   font-size: 14px;
-  color: var(--ink-2);
+  color: var(--footer-text);
 
   &__inner {
     display: grid;
@@ -740,19 +746,20 @@ a {
     gap: 2rem;
     max-width: $content-width + 48px;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem;
+    padding: 2.75rem 1.5rem 2.5rem;
   }
 
   &__name {
     margin: 0 0 0.3rem;
     font-family: $serif;
     font-size: 22px;
-    color: var(--accent);
+    color: #fff;
   }
 
   &__label {
     @extend %mono-label;
     margin: 0 0 0.6rem;
+    color: var(--nus-orange);
   }
 
   p { margin: 0 0 0.2rem; }
@@ -763,25 +770,36 @@ a {
     padding: 0;
   }
 
-  a {
-    color: var(--ink);
+  a,
+  a:visited {
+    color: #fff;
     text-decoration: underline;
-    text-decoration-color: var(--rule-strong);
+    text-decoration-color: var(--footer-rule);
     text-underline-offset: 3px;
   }
 
+  a:hover {
+    color: #fff;
+    text-decoration-color: var(--nus-orange);
+  }
+
   &__bottom {
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid var(--footer-rule);
 
     p {
       @extend %mono-label;
       letter-spacing: 0.04em;
       text-transform: none;
+      color: var(--footer-dim);
       max-width: $content-width + 48px;
       margin: 0 auto;
       padding: 1rem 1.5rem;
     }
   }
+}
+
+html[data-theme="dark"] .site-footer {
+  --footer-bg   : #0a1d38;
 }
 
 /* Small screens

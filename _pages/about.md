@@ -60,9 +60,10 @@ redirect_from:
 
 <section class="home-section">
   <h2 class="section-title">Selected Publications</h2>
-  {% assign featured = site.data.publications | where: "selected", true %}
+  {% comment %}Home page shows only the selected Nature-family papers, three across.{% endcomment %}
+  {% assign featured = site.data.publications | where: "selected", true | where_exp: "p", "p.venue contains 'Nature'" %}
   <div class="pub-tiles">
-    {% for p in featured %}
+    {% for p in featured limit: 3 %}
       {% include pub-item.html pub=p tile=true %}
     {% endfor %}
   </div>

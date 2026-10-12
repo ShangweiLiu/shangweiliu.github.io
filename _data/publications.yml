@@ -1,0 +1,106 @@
+# Publications, newest first. Rendered on /publication/all/ and, for entries
+# with `selected: true`, on /publication/selected/ and the home page.
+#
+# authors: Markdown; wrap group members in **bold**.
+# image:   thumbnail path under /images/ (used for selected publications).
+
+- title: "Can China break the 'cost curse' of nuclear power?"
+  authors: "**Shangwei Liu**, Gang He, Minghao Qiu, Daniel M. Kammen"
+  year: 2025
+  venue: "Nature"
+  details: "643: 1186–1188"
+  url: "https://www.nature.com/articles/d41586-025-02341-z"
+  selected: true
+  image: "publication/nuclear_key_fig.png"
+  coverage:
+    - name: "New York Times"
+      url: "https://www.nytimes.com/interactive/2025/10/22/climate/china-us-nuclear-energy-race.html"
+    - name: "The Economist"
+      url: "https://www.economist.com/business/2025/09/04/why-nuclear-is-now-a-booming-industry"
+    - name: "Harvard Belfer"
+      url: "https://www.belfercenter.org/research-analysis/breaking-cost-escalation-curse-nuclear-power"
+    - name: "CUNY"
+      url: "https://www.gc.cuny.edu/news/chinas-nuclear-power-development-strategy-holds-key-lower-costs"
+    - name: "JHU"
+      url: "https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/"
+    - name: "Roosevelt Institute blog"
+      url: "https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/"
+  note: "Our paper received millions of views and wide discussion on social media."
+
+- title: "A Large-Scale Residential Load Dataset in Extreme Weather Events: A Case in Southern China"
+  authors: "Bo Li, Ruotao Yu, Kaiye Gan, Guangchun Ruan, Wei Dai, **Shangwei Liu**, Mingxia Yang, Haiwang Zhong"
+  year: 2025
+  venue: "Scientific Data"
+  details: "12, 450"
+  url: "https://doi.org/10.1038/s41597-025-04766-7"
+
+- title: "Impacts of heatwaves on electricity reliability: Evidence from power outage data in China"
+  authors: "Jing Liang, Yueming (Lucy) Qiu, Bo Wang, Xingchi Shen, **Shangwei Liu**"
+  year: 2025
+  venue: "iScience"
+  details: "111855"
+  url: "https://www.cell.com/iscience/fulltext/S2589-0042(25)00115-4"
+
+- title: "Diversifying heat sources in China's urban district heating systems will reduce risk of carbon lock-in"
+  authors: "**Shangwei Liu**, Yang Guo, Fabian Wagner, Hongxun Liu, Ryna Yiyun Cui, Denise L. Mauzerall"
+  year: 2024
+  venue: "Nature Energy"
+  details: "9, 1021–1031"
+  url: "https://www.nature.com/articles/s41560-024-01560-4"
+  selected: true
+  image: "publication/ne_chp.png"
+  coverage:
+    - name: "Princeton SPIA"
+      url: "https://cpree.princeton.edu/news/2024/diversifying-china%E2%80%99s-urban-heating-systems-will-reduce-risk-carbon-lock"
+  note: "Policy brief submitted to China's State Council"
+
+- title: "Subsidizing grid-based electrolytic hydrogen could increase GHG emissions in coal dominated power systems"
+  authors: "Liqun Peng, Yang Guo, **Shangwei Liu**, Gang He, Denise L. Mauzerall"
+  year: 2024
+  venue: "Environmental Science & Technology"
+  details: "58(12), 5187–5195"
+  url: "https://pubs.acs.org/doi/full/10.1021/acs.est.3c03045"
+
+- title: "Improving building envelope efficiency lowers costs and emissions from rural residential heating in China"
+  authors: "**Shangwei Liu**, Hongxun Liu, Denise L. Mauzerall"
+  year: 2023
+  venue: "Environmental Science & Technology"
+  details: "57, 595–605"
+  url: "https://doi.org/10.1021/acs.est.2c06863"
+  selected: true
+  image: "publication/est_envelope.jpeg"
+
+- title: "Deciphering the pattern of inter-provincial water stress transferring: A case study on China's mainland"
+  authors: "Xin Tian, Yiling Xiong, **Shangwei Liu**, Zhipeng Tang"
+  year: 2020
+  venue: "China Population, Resources and Environment"
+  details: "30(12): 75–83"
+  url: "https://cssd1992.org/issue_info.aspx?ID=588"
+
+- title: "Challenges towards carbon dioxide emissions peak under in-depth socioeconomic transition in China: Insights from Shanghai"
+  authors: "**Shangwei Liu**, Xin Tian, Yiling Xiong, Yan Zhang, Hiroki Tanikawa"
+  year: 2020
+  venue: "Journal of Cleaner Production"
+  details: "247, 119083"
+  url: "https://doi.org/10.1016/j.jclepro.2019.119083"
+
+- title: "New patterns in China's water footprint: analysis of spatial and structural transitions from a regional perspective"
+  authors: "Yiling Xiong, Xin Tian, **Shangwei Liu**, Zhipeng Tang"
+  year: 2020
+  venue: "Journal of Cleaner Production"
+  details: "245, 118942"
+  url: "https://doi.org/10.1016/j.jclepro.2019.118942"
+
+- title: "Stagnating CO2 emissions with in-depth socioeconomic transition in Beijing"
+  authors: "Jie Wang, Yiling Xiong, Xin Tian, **Shangwei Liu**, Jiashuo Li, Hiroki Tanikawa"
+  year: 2018
+  venue: "Applied Energy"
+  details: "228, 1714–1725"
+  url: "https://doi.org/10.1016/j.apenergy.2018.07.029"
+
+- title: "How the transitions in iron and steel and construction material industries impact China's CO2 emissions: comprehensive analysis from an inter-sector linked perspective"
+  authors: "**Shangwei Liu**, Xin Tian, Wenjia Cai, Weiqiang Chen, Yafei Wang"
+  year: 2018
+  venue: "Applied Energy"
+  details: "211, 64–75"
+  url: "https://doi.org/10.1016/j.apenergy.2017.11.040"

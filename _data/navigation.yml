@@ -8,15 +8,13 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Home"
-    url: /
+  # The group name on the left of the header already links home.
+  - title: "People"
+    url: /people/
 
-  - title: "Publication"
-    children:
-      - title: "Selected"
-        url: /publication/selected/
-      - title: "All"
-        url: /publication/all/
+  # Selected/All are switched with tabs on the publication pages.
+  - title: "Publications"
+    url: /publication/selected/
     
   #- title: "Research"
   #  url: /research/
@@ -33,8 +31,9 @@ main:
   #- title: "Blog Posts"
   #  url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
+  # CV is linked from the PI card on /people/ only.
+  #- title: "CV"
+  #  url: /cv/
 
   - title: "Opportunities"
     url: /opportunities/

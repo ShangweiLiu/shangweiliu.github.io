@@ -1,0 +1,57 @@
+# Group members, rendered on /people/ (see _includes/member-card.html).
+#
+# photo: path under /images/. If the file does not exist yet, a placeholder
+#        with the person's initials is shown, so you can just drop the photo
+#        into images/people/ with the filename listed here.
+# bio:   Markdown is supported.
+
+- section: "Principal Investigator"
+  people:
+    - name: "Shangwei Liu"
+      initials: "SL"
+      role: "Presidential Fellow (Tenure-Track), Department of Civil and Environmental Engineering"
+      photo: "people/shangwei-liu.jpg"
+      email: "shangweiliu@nus.edu.sg"
+      links:
+        - label: "CV"
+          url: "/cv/"
+        - label: "Google Scholar"
+          url: "https://scholar.google.com/citations?user=PxXSclcAAAAJ&hl=en"
+        - label: "ORCID"
+          url: "https://orcid.org/my-orcid?orcid=0000-0003-4106-3959"
+        - label: "LinkedIn"
+          url: "https://www.linkedin.com/in/shangwei-liu-72899411b/"
+      bio: |
+        I am a tenure-track [Presidential Fellow](https://www.nus.edu.sg/careers/nus-programmes/) in the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/) at the National University of Singapore.
+
+        My research focuses on energy and climate policy that combines engineering-based modeling with policy and economic analysis. Current research areas include clean energy transition and net-zero energy systems, technology innovation, and climate change impacts. My research has been published in leading journals including *Nature*, *Nature Energy*, and *Environmental Science & Technology*, and has been covered by *The New York Times*, *The Economist*, and other international media outlets. Before joining NUS, I was a postdoctoral research fellow at the Harvard Kennedy School. I did my Ph.D. in Science, Technology, and Environmental Policy at Princeton University and got my bachelor's degree in Environmental Science from Beijing Normal University.
+
+        A bit about my personal academic journey: I didn't actually choose environmental science for undergrad. Back in high school, I aspired to be a social scientist or a historian of ancient China. But I was assigned to environmental science after the college entrance exam (gaokao). I tried working in wet labs but I was very bad at experiments. It was when I started research in industrial ecology and environmental policy that something clicked, and I realized I could combine public policy with engineering-style research. So I pursued my Ph.D. and did my postdoc at the public policy schools at Princeton and Harvard. At NUS, my lab aims to bridge the gap between engineers and policy/economic analysts, and train the next generation of energy scientists and environmentalists with system thinking across disciplines to address the grand global challenges of sustainability.
+
+- section: "Research Fellows"
+  people:
+    - name: "Xiao Li"
+      initials: "XL"
+      role: "Research Fellow"
+      photo: "people/xiao-li.jpg"
+      bio: |
+        Dr. Xiao Li is a Research Fellow in Prof. Shangwei Liu's group at the National University of Singapore. He received his Ph.D. from Wuhan University and was previously a Postdoctoral Researcher at McGill University and a Visiting Ph.D. Scholar at Johns Hopkins University, SAIS.
+
+        His research examines how interactions among energy, materials, and water systems reshape pathways to net zero, revealing dependencies and trade-offs that conventional sector-specific analyses overlook. His work has been published in *Joule*, *Renewable and Sustainable Energy Reviews*, *Applied Energy*, *AGU Water Resources Research*, and the *ASCE Journal of Water Resources Planning and Management*.
+
+    - name: "Longquan Li"
+      initials: "LL"
+      role: "Research Fellow"
+      photo: "people/longquan-li.jpg"
+      email: "longquan.li@nus.edu.sg"
+      bio: |
+        Longquan Li received his PhD from the University of Groningen, the Netherlands, in 2026. His previous research focused on integrated energy systems, hydrogen supply chains, industrial decarbonisation, and waste-heat recovery. He has experience in energy-system capacity expansion and operational optimisation, techno-economic assessment, and thermodynamic modelling.
+
+- section: "PhD Students"
+  people:
+    - name: "Xi Zeng"
+      initials: "XZ"
+      role: "PhD Student"
+      photo: "people/xi-zeng.jpg"
+      bio: |
+        Xi Zeng is a PhD student at the National University of Singapore, working with Dr. Shangwei Liu. Her current research focuses on the distributional consequences of climate change and climate policy. In her spare time, she enjoys badminton and strength training.

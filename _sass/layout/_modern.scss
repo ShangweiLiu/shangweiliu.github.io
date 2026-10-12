@@ -414,6 +414,27 @@ a {
 
   ul { padding-left: 1.1em; }
 
+  &--media {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &__media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  &__body {
+    padding: 0.4rem 1.4rem 1.3rem;
+  }
+
+  &--wide {
+    margin: 0.5rem 0 1.5rem;
+  }
+
   &__icon {
     display: inline-grid;
     place-items: center;

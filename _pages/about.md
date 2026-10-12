@@ -13,7 +13,7 @@ redirect_from:
 <section class="hero">
   <p class="hero__eyebrow">Department of Civil and Environmental Engineering · National University of Singapore</p>
   <h1 class="hero__title">{{ site.title }}</h1>
-  <p class="hero__lead">We study energy and climate policy, combining engineering-based modeling with policy and economic analysis to inform the transition to net-zero energy systems.</p>
+  <p class="hero__lead">We combine energy system modeling and economic analysis to inform decision-making in net-zero energy transitions and climate policy.</p>
   <p class="hero__pi">Led by <a href="{{ base_path }}/people/">Dr. Shangwei Liu</a>, Presidential Fellow at NUS</p>
   <p class="hero__actions">
     <a class="btn-pill btn-pill--primary" href="{{ base_path }}/people/">Meet the group</a>
@@ -24,26 +24,28 @@ redirect_from:
 
 <section class="home-section">
   <h2 class="section-title">Research</h2>
-  <div class="card-grid">
-    <div class="card">
-      <i class="fas fa-bolt card__icon" aria-hidden="true"></i>
-      <h3>Clean energy transition</h3>
-      <p>Pathways to net-zero energy systems across power, heating, and industry.</p>
+  <!-- Images live in images/research/; replace a file to change its picture. -->
+  <div class="card-grid card-grid--3">
+    <div class="card card--media">
+      <img class="card__media" src="{{ base_path }}/images/research/energy-system-modeling.svg" alt="">
+      <div class="card__body">
+        <h3>Energy System Modeling</h3>
+        <p>Designing pathways to net-zero energy systems across sectors, including power, heating, buildings, and industry.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fas fa-lightbulb card__icon" aria-hidden="true"></i>
-      <h3>Technology innovation</h3>
-      <p>Costs and deployment of low-carbon technologies such as nuclear power and hydrogen.</p>
+    <div class="card card--media">
+      <img class="card__media" src="{{ base_path }}/images/research/technology-innovation.svg" alt="">
+      <div class="card__body">
+        <h3>Technology Innovation</h3>
+        <p>Costs and deployment of low-carbon technologies such as nuclear power and hydrogen, and the industrial policies that shape them.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fas fa-temperature-high card__icon" aria-hidden="true"></i>
-      <h3>Climate change impacts</h3>
-      <p>How climate extremes affect energy systems and who bears the consequences.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-earth-asia card__icon" aria-hidden="true"></i>
-      <h3>Southeast Asia</h3>
-      <p>Decarbonization pathways in Southeast Asia and their environmental implications.</p>
+    <div class="card card--media">
+      <img class="card__media" src="{{ base_path }}/images/research/climate-change-impacts.svg" alt="">
+      <div class="card__body">
+        <h3>Climate Change Impacts</h3>
+        <p>The distributional impacts of climate change on individuals and nations.</p>
+      </div>
     </div>
   </div>
 </section>

@@ -44,3 +44,10 @@ We welcome visiting scholars and students with aligned research interests. Self-
 </div>
 
 </div>
+
+<div class="card card--wide" markdown="1">
+<i class="fas fa-handshake card__icon" aria-hidden="true"></i>
+### Collaboration
+
+Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric modeling. If your work connects with any of these, please feel free to get in touch.
+</div>

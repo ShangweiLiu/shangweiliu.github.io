@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Warming stripes with unequal impacts across groups">
+  <!-- warming stripes, cool to hot -->
+  <g>
+    <rect x="0"   width="40" height="360" fill="#0B3A6E"/>
+    <rect x="40"  width="40" height="360" fill="#1D5591"/>
+    <rect x="80"  width="40" height="360" fill="#3A73AE"/>
+    <rect x="120" width="40" height="360" fill="#6596C6"/>
+    <rect x="160" width="40" height="360" fill="#96B8DA"/>
+    <rect x="200" width="40" height="360" fill="#C4D6EA"/>
+    <rect x="240" width="40" height="360" fill="#E9EEF3"/>
+    <rect x="280" width="40" height="360" fill="#F7E3CC"/>
+    <rect x="320" width="40" height="360" fill="#F6C995"/>
+    <rect x="360" width="40" height="360" fill="#F4AA5E"/>
+    <rect x="400" width="40" height="360" fill="#EF8B2C"/>
+    <rect x="440" width="40" height="360" fill="#E06A12"/>
+    <rect x="480" width="40" height="360" fill="#C9520C"/>
+    <rect x="520" width="40" height="360" fill="#AC3D0B"/>
+    <rect x="560" width="40" height="360" fill="#8E2C0A"/>
+    <rect x="600" width="40" height="360" fill="#701F08"/>
+  </g>
+  <!-- unequal burden across groups -->
+  <rect x="150" y="96" width="340" height="190" rx="18" fill="#fff" fill-opacity="0.92"/>
+  <path d="M190 252H450" stroke="#003D7C" stroke-width="2" stroke-opacity="0.35"/>
+  <g>
+    <rect x="200" y="214" width="34" height="38" rx="5" fill="#7FA8D6"/>
+    <rect x="252" y="196" width="34" height="56" rx="5" fill="#2D6FB5"/>
+    <rect x="304" y="174" width="34" height="78" rx="5" fill="#003D7C"/>
+    <rect x="356" y="148" width="34" height="104" rx="5" fill="#EF7C00"/>
+    <rect x="408" y="118" width="34" height="134" rx="5" fill="#C9520C"/>
+  </g>
+  <g fill="#003D7C" fill-opacity="0.6">
+    <circle cx="217" cy="270" r="5"/>
+    <circle cx="269" cy="270" r="5"/>
+    <circle cx="321" cy="270" r="5"/>
+    <circle cx="373" cy="270" r="5"/>
+    <circle cx="425" cy="270" r="5"/>
+  </g>
+</svg>

@@ -43,6 +43,12 @@ We welcome visiting scholars and students with aligned research interests. Self-
 </div>
 
 <div class="card card--wide" markdown="1">
+### NUS Undergraduate and Master's Students
+
+NUS undergraduate and master's students are welcome to email us at any time. We are happy to discuss research opportunities such as Final Year Projects (FYP), the Undergraduate Research Opportunities Programme (UROP), and master's projects.
+</div>
+
+<div class="card card--wide" markdown="1">
 ### Collaboration
 
 Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric modeling. If your work connects with any of these, please feel free to get in touch.

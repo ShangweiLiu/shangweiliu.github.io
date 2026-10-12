@@ -14,7 +14,6 @@ If you are interested in joining us, please email Dr. Shangwei Liu at [shangweil
 <div class="card-grid card-grid--3">
 
 <div class="card" markdown="1">
-<i class="fas fa-graduation-cap card__icon" aria-hidden="true"></i>
 ### Ph.D. Students
 
 Ph.D. positions are available starting Fall 2027. If you are interested, feel free to reach out early with your CV.
@@ -23,7 +22,6 @@ Ph.D. positions are available starting Fall 2027. If you are interested, feel fr
 </div>
 
 <div class="card" markdown="1">
-<i class="fas fa-flask card__icon" aria-hidden="true"></i>
 ### Postdoctoral Researchers
 
 We welcome applications from candidates who are applying for or interested in the following fellowships:
@@ -34,7 +32,6 @@ We welcome applications from candidates who are applying for or interested in th
 </div>
 
 <div class="card" markdown="1">
-<i class="fas fa-plane-arrival card__icon" aria-hidden="true"></i>
 ### Visiting Scholars
 
 We welcome visiting scholars and students with aligned research interests. Self-funded visitors are welcome. Potential funding sources include:
@@ -46,7 +43,6 @@ We welcome visiting scholars and students with aligned research interests. Self-
 </div>
 
 <div class="card card--wide" markdown="1">
-<i class="fas fa-handshake card__icon" aria-hidden="true"></i>
 ### Collaboration
 
 Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric modeling. If your work connects with any of these, please feel free to get in touch.

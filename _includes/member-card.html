@@ -20,7 +20,7 @@
     <div class="member__bio">{{ p.bio | markdownify }}</div>
     {% if p.email or p.links %}
       <p class="member__links">
-        {% if p.email %}<a class="chip" href="mailto:{{ p.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ p.email }}</a>{% endif %}
+        {% if p.email %}<a class="chip chip--mail" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
         {% for l in p.links %}<a class="chip" href="{% unless l.url contains '://' %}{{ base_path }}{% endunless %}{{ l.url }}">{{ l.label }}</a>{% endfor %}
       </p>
     {% endif %}

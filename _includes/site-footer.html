@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__name">{{ site.title }}</p>
+      <p>Department of Civil and Environmental Engineering</p>
+      <p>National University of Singapore</p>
+    </div>
+    <div>
+      <p class="site-footer__label">Contact</p>
+      <p>Shangwei Liu</p>
+      <p>Presidential Fellow, NUS</p>
+      <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+    </div>
+    <div>
+      <p class="site-footer__label">Links</p>
+      <ul>
+        <li><a href="https://cde.nus.edu.sg/cee/">NUS Civil &amp; Environmental Engineering ↗</a></li>
+        <li><a href="{{ site.author.googlescholar }}">Google Scholar ↗</a></li>
+        <li><a href="{{ base_path }}/opportunities/">Join us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }} · National University of Singapore</p>
+  </div>
+</footer>

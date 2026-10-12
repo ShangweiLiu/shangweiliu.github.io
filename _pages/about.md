@@ -18,25 +18,28 @@ redirect_from:
 
 <section class="home-section home-section--first">
   <h2 class="section-title">Research</h2>
-  <!-- Images live in images/research/; replace a file to change its picture. -->
+  <!-- Photos live in images/research/ (CC0 / public domain, from Wikimedia Commons); replace a file to change its picture. -->
   <div class="card-grid card-grid--3">
     <div class="card card--media">
-      <img class="card__media" src="{{ base_path }}/images/research/energy-system-modeling.svg" alt="">
+      <img class="card__media" src="{{ base_path }}/images/research/energy-system-modeling.jpg" alt="Electricity pylons at sunset" loading="lazy">
       <div class="card__body">
+        <p class="card__kicker">Area 01</p>
         <h3>Energy System Modeling</h3>
         <p>Designing pathways to net-zero energy systems across sectors, including power, heating, buildings, and industry.</p>
       </div>
     </div>
     <div class="card card--media">
-      <img class="card__media" src="{{ base_path }}/images/research/technology-innovation.svg" alt="">
+      <img class="card__media" src="{{ base_path }}/images/research/technology-innovation.jpg" alt="Looking up through a nuclear cooling tower" loading="lazy">
       <div class="card__body">
+        <p class="card__kicker">Area 02</p>
         <h3>Technology Innovation</h3>
         <p>Costs and deployment of low-carbon technologies such as nuclear power and hydrogen, and the industrial policies that shape them.</p>
       </div>
     </div>
     <div class="card card--media">
-      <img class="card__media" src="{{ base_path }}/images/research/climate-change-impacts.svg" alt="">
+      <img class="card__media" src="{{ base_path }}/images/research/climate-change-impacts.jpg" alt="Satellite map of urban heat in Paris" loading="lazy">
       <div class="card__body">
+        <p class="card__kicker">Area 03</p>
         <h3>Climate Change Impacts</h3>
         <p>The distributional impacts of climate change on individuals and nations.</p>
       </div>
@@ -58,9 +61,11 @@ redirect_from:
 <section class="home-section">
   <h2 class="section-title">Selected Publications</h2>
   {% assign featured = site.data.publications | where: "selected", true %}
-  {% for p in featured %}
-    {% include pub-item.html pub=p card=true %}
-  {% endfor %}
+  <div class="pub-tiles">
+    {% for p in featured %}
+      {% include pub-item.html pub=p tile=true %}
+    {% endfor %}
+  </div>
   <p><a class="more-link" href="{{ base_path }}/publication/all/">All publications →</a></p>
 </section>
 

@@ -33,7 +33,6 @@
       url: "https://hub.jhu.edu/2025/07/28/curbing-nuclear-power-plant-costs/"
     - name: "Roosevelt Institute blog"
       url: "https://rooseveltinstitute.org/blog/can-china-break-nuclear-powers-cost-curse/"
-  note: "Our paper received millions of views and wide discussion on social media."
 
 - title: "A Large-Scale Residential Load Dataset in Extreme Weather Events: A Case in Southern China"
   authors: "Bo Li, Ruotao Yu, Kaiye Gan, Guangchun Ruan, Wei Dai, **Shangwei Liu**, Mingxia Yang, Haiwang Zhong"
@@ -60,7 +59,6 @@
   coverage:
     - name: "Princeton SPIA"
       url: "https://cpree.princeton.edu/news/2024/diversifying-china%E2%80%99s-urban-heating-systems-will-reduce-risk-carbon-lock"
-  note: "Policy brief submitted to China's State Council"
 
 - title: "Subsidizing grid-based electrolytic hydrogen could increase GHG emissions in coal dominated power systems"
   authors: "Liqun Peng, Yang Guo, **Shangwei Liu**, Gang He, Denise L. Mauzerall"

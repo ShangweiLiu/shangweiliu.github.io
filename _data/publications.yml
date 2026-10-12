@@ -4,6 +4,14 @@
 # authors: Markdown; wrap group members in **bold**.
 # image:   thumbnail path under /images/ (used for selected publications).
 
+- title: "Energy system savings largely offset the costs of urban building energy efficiency improvements in China"
+  authors: "**Shangwei Liu**, Xiangwen Fu, Liqun Peng, Siyue Guo, Denise L. Mauzerall"
+  year: 2026
+  venue: "Nature Cities"
+  url: "https://doi.org/10.1038/s44284-026-00475-3"
+  selected: true
+  image: "publication/nc_building_efficiency.png"
+
 - title: "Can China break the 'cost curse' of nuclear power?"
   authors: "**Shangwei Liu**, Gang He, Minghao Qiu, Daniel M. Kammen"
   year: 2025

@@ -13,7 +13,7 @@ redirect_from:
 <section class="hero">
   <p class="hero__eyebrow">Department of Civil and Environmental Engineering · National University of Singapore</p>
   <h1 class="hero__title">{{ site.title }}</h1>
-  <p class="hero__lead">We combine system modeling and economic analysis to inform decision-making in net-zero energy transitions, climate policy, and industrial policy.</p>
+  <p class="hero__lead">We use interdisciplinary system modeling to inform decision-making in energy transitions, climate governance, and industrial policy.</p>
 </section>
 
 <section class="home-section home-section--first">

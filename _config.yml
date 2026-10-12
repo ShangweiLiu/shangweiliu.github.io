@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air"
-title                    : "Liu Group" # placeholder until the group has a name; shown in the header and home page
+title                    : "Shangwei Liu Group" # shown in the header and as the home page title
 title_separator          : "-"
 name                     : &name "Shangwei Liu"
 description              : &description #"Personal website for Shangwei Liu"

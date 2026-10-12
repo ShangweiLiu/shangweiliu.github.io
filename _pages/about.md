@@ -13,16 +13,10 @@ redirect_from:
 <section class="hero">
   <p class="hero__eyebrow">Department of Civil and Environmental Engineering · National University of Singapore</p>
   <h1 class="hero__title">{{ site.title }}</h1>
-  <p class="hero__lead">We combine system modeling and economic analysis to inform decision-making in net-zero energy transitions and climate policy.</p>
-  <p class="hero__pi">Led by <a href="{{ base_path }}/people/">Dr. Shangwei Liu</a>, Presidential Fellow at NUS</p>
-  <p class="hero__actions">
-    <a class="btn-pill btn-pill--primary" href="{{ base_path }}/people/">Meet the group</a>
-    <a class="btn-pill" href="{{ base_path }}/publication/selected/">Publications</a>
-    <a class="btn-pill btn-pill--accent" href="{{ base_path }}/opportunities/">Join us</a>
-  </p>
+  <p class="hero__lead">We combine system modeling and economic analysis to inform decision-making in net-zero energy transitions, climate policy, and industrial policy.</p>
 </section>
 
-<section class="home-section">
+<section class="home-section home-section--first">
   <h2 class="section-title">Research</h2>
   <!-- Images live in images/research/; replace a file to change its picture. -->
   <div class="card-grid card-grid--3">

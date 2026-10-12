@@ -323,6 +323,12 @@ a {
 .home-section {
   padding: 2.5rem 0;
   border-top: 1px solid var(--global-border-color);
+
+  // Research follows the intro directly, without a divider.
+  &--first {
+    padding-top: 0;
+    border-top: 0;
+  }
 }
 
 .more-link,

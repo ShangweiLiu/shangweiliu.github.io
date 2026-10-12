@@ -523,6 +523,30 @@ html[data-theme="dark"] .masthead {
     margin: 0.5rem 0 1.5rem;
   }
 
+  // Full-width card with the heading in a left column (Opportunities page).
+  &--row {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    column-gap: 2rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+
+    > h3,
+    .page__content & > h3 {
+      grid-column: 1;
+      grid-row: 1 / span 10;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    > :not(h3) { grid-column: 2; }
+
+    > p:first-of-type { margin-top: 0.15rem; }
+
+    .page__content & > p { margin-bottom: 0.6rem; }
+    .page__content & > ul { margin: 0.2rem 0 0; }
+  }
+
   &__icon { display: none; }
 }
 
@@ -855,6 +879,14 @@ html[data-theme="dark"] .site-footer {
    ========================================================================== */
 
 @media (max-width: 700px) {
+
+  .card--row {
+    grid-template-columns: 1fr;
+
+    > h3 { grid-row: auto; margin-bottom: 0.6rem; }
+    > :not(h3) { grid-column: 1; }
+  }
+
 
   .masthead__logo { height: 24px; }
 

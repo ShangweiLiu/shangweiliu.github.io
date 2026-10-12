@@ -11,9 +11,7 @@ Our lab in the [Department of Civil and Environmental Engineering](https://cde.n
 If you are interested in joining us, please email Dr. Shangwei Liu at [shangweiliu@nus.edu.sg](mailto:shangweiliu@nus.edu.sg) with your CV attached. Please use the subject line format: **"Position + Current Affiliation + Name"** (e.g., "PhD – NUS – Jane Doe").
 </div>
 
-<div class="card-grid card-grid--3">
-
-<div class="card" markdown="1">
+<div class="card card--row" markdown="1">
 ### Ph.D. Students
 
 Ph.D. positions are available starting Fall 2027. If you are interested, feel free to reach out early with your CV.
@@ -21,7 +19,7 @@ Ph.D. positions are available starting Fall 2027. If you are interested, feel fr
 - [NUS Graduate School PhD Scholarships](https://nusgs.nus.edu.sg/scholarships/)
 </div>
 
-<div class="card" markdown="1">
+<div class="card card--row" markdown="1">
 ### Postdoctoral Researchers
 
 We welcome applications from candidates who are applying for or interested in the following fellowships:
@@ -31,7 +29,7 @@ We welcome applications from candidates who are applying for or interested in th
 - [Lee Kuan Yew Postdoctoral Fellowship](https://www.nus.edu.sg/careers/nus-programmes/lee-kuan-yew-postdoctoral-fellowship/)
 </div>
 
-<div class="card" markdown="1">
+<div class="card card--row" markdown="1">
 ### Visiting Scholars
 
 We welcome visiting scholars and students with aligned research interests. Self-funded visitors are welcome. Potential funding sources include:
@@ -40,15 +38,13 @@ We welcome visiting scholars and students with aligned research interests. Self-
 - [China Scholarship Council](https://www.csc.edu.cn/)
 </div>
 
-</div>
-
-<div class="card card--wide" markdown="1">
+<div class="card card--row" markdown="1">
 ### NUS Undergraduate and Master's Students
 
 NUS undergraduate and master's students are welcome to email us at any time. We are happy to discuss research opportunities such as Final Year Projects (FYP), the Undergraduate Research Opportunities Programme (UROP), and master's projects.
 </div>
 
-<div class="card card--wide" markdown="1">
+<div class="card card--row" markdown="1">
 ### Collaboration
 
 Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric modeling. If your work connects with any of these, please feel free to get in touch.

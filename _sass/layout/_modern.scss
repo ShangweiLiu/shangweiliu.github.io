@@ -111,20 +111,29 @@ a {
 }
 
 /* Header
+   NUS blue bar with an NUS orange rule underneath.
    ========================================================================== */
 
 .masthead {
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
-          backdrop-filter: saturate(160%) blur(12px);
+  --header-bg   : #{$nus-blue};
+  --header-text : rgba(255, 255, 255, 0.86);
 
-  &::after { background: var(--rule); }
+  background: var(--header-bg);
+
+  &::after {
+    height: 3px;
+    background: var(--nus-orange);
+  }
 
   &__inner-wrap {
     font-family: $sans;
     padding: 0.55em 1.5em;
     max-width: $content-width + 48px;
   }
+}
+
+html[data-theme="dark"] .masthead {
+  --header-bg   : #0a1d38;
 }
 
 .masthead__menu-item,
@@ -139,24 +148,21 @@ a {
   gap: 0.85rem;
 }
 
+// The logo artwork is on white, so it sits on a small white plate.
 .masthead__logo {
   display: block;
-  height: 34px;
+  height: 30px;
   width: auto;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #fff;
+  box-sizing: content-box;
 }
 
 .masthead__divider {
   width: 1px;
   height: 28px;
-  background: var(--rule-strong);
-}
-
-// The logo artwork is on white; keep it on a white plate in dark mode.
-html[data-theme="dark"] .masthead__logo {
-  padding: 3px 5px;
-  border-radius: 2px;
-  background: #fff;
-  box-sizing: content-box;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .greedy-nav {
@@ -166,33 +172,46 @@ html[data-theme="dark"] .masthead__logo {
   }
 
   .visible-links {
-    > li:first-child a {
+    a,
+    a:visited,
+    #theme-icon {
+      color: var(--header-text);
+    }
+
+    a:hover { color: #fff; }
+
+    > li:first-child a,
+    > li:first-child a:visited {
       font-family: $serif;
       font-size: 21px;
       font-weight: 400;
-      color: var(--accent);
+      color: #fff;
       letter-spacing: -0.01em;
 
       &::before { display: none; }
     }
 
     a::before {
-      height: 1px;
-      bottom: 0.35rem;
+      height: 2px;
+      bottom: 0.3rem;
       background: var(--nus-orange);
     }
   }
 
   button {
-    background-color: var(--nus-blue);
+    background-color: var(--nus-orange);
     border-radius: 2px;
     height: 2.4rem;
   }
 
+  // Overflow menu on phones drops down onto the page, so it keeps page colours.
   .hidden-links {
     background: var(--paper);
     border-radius: 2px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    a,
+    a:visited { color: var(--ink); }
   }
 }
 
@@ -837,7 +856,7 @@ html[data-theme="dark"] .site-footer {
 
 @media (max-width: 700px) {
 
-  .masthead__logo { height: 28px; }
+  .masthead__logo { height: 24px; }
 
   .greedy-nav .visible-links > li:first-child a.masthead__brand {
     gap: 0.6rem;

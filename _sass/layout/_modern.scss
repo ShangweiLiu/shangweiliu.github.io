@@ -791,37 +791,16 @@ html[data-theme="dark"] .masthead {
 /* Teaching
    ========================================================================== */
 
-.course-list {
-  border-top: 1px solid var(--rule);
+// Course cards reuse .card--media; three across, wrapping as courses are added.
+.card-grid--courses {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
-.course {
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  column-gap: 2rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--rule);
-
-  .page__content &__term {
-    @extend %mono-label;
-    margin: 0.3rem 0 0;
-    color: var(--accent-warm);
-  }
-
-  .page__content &__code {
-    @extend %mono-label;
-    margin: 0 0 0.35rem;
-    color: var(--accent);
-  }
-
-  &__title,
-  .page__content &__title {
-    margin: 0;
-    font-family: $serif;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.25;
-  }
+.page__content .course__meta {
+  @extend %mono-label;
+  letter-spacing: 0.06em;
+  margin: 0.5rem 0 0;
+  color: var(--accent-warm);
 }
 
 /* CV
@@ -916,7 +895,6 @@ html[data-theme="dark"] .site-footer {
 
 @media (max-width: 700px) {
 
-  .course { grid-template-columns: 1fr; row-gap: 0.5rem; }
 
 
   .card--row {

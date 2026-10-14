@@ -7,15 +7,22 @@ hide_footer: true
 
 {% include base_path %}
 
-{% comment %}Courses come from _data/teaching.yml.{% endcomment %}
-<div class="course-list">
-  {% for c in site.data.teaching %}
-  <article class="course">
-    <p class="course__term">{{ c.term }}</p>
-    <div>
-      <p class="course__code">{{ c.code }}</p>
-      <h3 class="course__title">{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
-    </div>
-  </article>
-  {% endfor %}
-</div>
+{% comment %}Courses come from _data/teaching.yml, grouped by institution.{% endcomment %}
+{% assign by_school = site.data.teaching | group_by: "institution" %}
+{% for school in by_school %}
+<section class="member-section">
+  <h2 class="section-title">{{ school.name }}</h2>
+  <div class="card-grid card-grid--courses">
+    {% for c in school.items %}
+    <article class="card card--media">
+      {% if c.image %}<img class="card__media" src="{{ base_path }}/images/{{ c.image }}" alt="{{ c.image_alt }}" loading="lazy">{% endif %}
+      <div class="card__body">
+        <p class="card__kicker">{{ c.code }}</p>
+        <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+        <p class="course__meta">{{ c.role }} · {{ c.term }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

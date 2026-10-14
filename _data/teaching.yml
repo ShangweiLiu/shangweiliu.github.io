@@ -1,7 +1,38 @@
-# Courses on /teaching/, newest first.
+# Courses on /teaching/, grouped by institution in the order they first
+# appear here (newest first). Shown as cards, three across.
 #
-# url: optional link (e.g. the NUSMods page); leave out if none.
+# image: path under /images/ (16:10 works best); put new pictures in images/teaching/.
+#        Current photos are CC0 / public domain from Wikimedia Commons.
+# url:   optional link (e.g. the NUSMods page); leave out if none.
 
-- code: "CE2003"
+- institution: "National University of Singapore"
+  code: "CE2003"
   title: "Energy, Environment and Economics"
+  role: "Instructor"
   term: "Semester 2, AY2026/27"
+  image: "teaching/ce2003.jpg"
+  image_alt: "Solar panels beside farmland"
+
+- institution: "Princeton University"
+  code: "SPI594S"
+  title: "Climate Change: Science, Policy and Mitigation"
+  role: "Assistant Instructor"
+  term: "Spring 2023; Fall 2021"
+  image: "teaching/spi594s.jpg"
+  image_alt: "Steam plume from a cooling tower at sunset"
+
+- institution: "Princeton University"
+  code: "ENV302"
+  title: "Practical Models for Environmental Systems"
+  role: "Assistant Instructor"
+  term: "Spring 2022"
+  image: "teaching/env302.jpg"
+  image_alt: "Aerial view of farmland, roads, and a solar farm"
+
+- institution: "Princeton University"
+  code: "CEE334"
+  title: "Global Environmental Issues"
+  role: "Assistant Instructor"
+  term: "Fall 2021"
+  image: "teaching/cee334.jpg"
+  image_alt: "Countryside with a power plant on the horizon"

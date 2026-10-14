@@ -1,8 +1,6 @@
 ---
 title: "Join Us"
-permalink: /join-us/
-redirect_from:
-  - /opportunities/
+permalink: /opportunities/
 layout: single
 hide_footer: true
 ---
@@ -55,7 +53,7 @@ We welcome visiting students and scholars with aligned research interests. Self-
 <div class="card card--row" markdown="1">
 ### NUS Undergraduate and Master's Students
 
-NUS undergraduate and master's students are welcome to email us at any time. We are happy to discuss research opportunities such as Final Year Projects (FYP), the Undergraduate Research Opportunities Programme (UROP), and master's projects.
+NUS undergraduate and master's students are welcome to email us at any time. We are happy to discuss research projects such as Final Year Projects (FYP), the Undergraduate Research Opportunities Programme (UROP), and master's projects.
 </div>
 
 <div class="card card--row" markdown="1">

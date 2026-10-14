@@ -55,7 +55,7 @@ Jekyll-based academic portfolio site using a customized Academic Pages / Minimal
 - `_publications/` - Research papers (categories: books, manuscripts, conferences)
 - `_talks/` - Speaking engagements with geolocation data
 - `_teaching/` - Teaching activities
-- `_pages/` - Static pages (about, people, publication, teaching, join-us, cv)
+- `_pages/` - Static pages (about, people, publication, teaching, opportunities = "Join Us", cv)
 
 ### Data Flow
 1. Source data in `markdown_generator/publications.tsv` and `markdown_generator/talks.tsv`

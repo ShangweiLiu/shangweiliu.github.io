@@ -75,5 +75,5 @@ redirect_from:
     <h2>Join the group</h2>
     <p>We are recruiting PhD students (Fall 2027), postdocs, and visiting scholars.</p>
   </div>
-  <a class="btn-pill btn-pill--accent" href="{{ base_path }}/join-us/">See open positions</a>
+  <a class="btn-pill btn-pill--accent" href="{{ base_path }}/opportunities/">See open positions</a>
 </section>

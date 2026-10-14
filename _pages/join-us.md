@@ -1,6 +1,8 @@
 ---
-title: "Opportunities"
-permalink: /opportunities/
+title: "Join Us"
+permalink: /join-us/
+redirect_from:
+  - /opportunities/
 layout: single
 hide_footer: true
 ---

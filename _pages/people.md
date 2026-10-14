@@ -20,5 +20,5 @@ hide_footer: true
 
 <section class="member-section">
   <h2 class="section-title">Join Us</h2>
-  <p>We are recruiting PhD students, postdocs, and visiting scholars. See <a href="{{ base_path }}/opportunities/">Opportunities</a>.</p>
+  <p>We are recruiting PhD students, postdocs, and visiting scholars. See <a href="{{ base_path }}/join-us/">Join Us</a>.</p>
 </section>

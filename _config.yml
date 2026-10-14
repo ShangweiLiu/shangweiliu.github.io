@@ -304,7 +304,7 @@ plugins:
   #- jekyll-gist
   - jekyll-paginate
   #- jekyll-sitemap
-  #- jekyll-redirect-from
+  - jekyll-redirect-from   # keeps old URLs such as /opportunities/ working
   #- jemoji
 
 # Mimic GitHub Pages with --safe

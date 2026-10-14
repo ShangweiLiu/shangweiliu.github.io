@@ -544,7 +544,8 @@ html[data-theme="dark"] .masthead {
     > p:first-of-type { margin-top: 0.15rem; }
 
     .page__content & > p { margin-bottom: 0.6rem; }
-    .page__content & > ul { margin: 0.2rem 0 0; }
+    .page__content & > ul { margin: 0.2rem 0 1rem; }
+    .page__content & > ul:last-child { margin-bottom: 0; }
   }
 
   &__icon { display: none; }

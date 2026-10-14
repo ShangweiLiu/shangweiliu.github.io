@@ -14,11 +14,7 @@ If you are interested in joining us, please email Dr. Shangwei Liu at [shangweil
 <div class="card card--row" markdown="1">
 ### Ph.D. Students
 
-We are recruiting **one Ph.D. student** to start in **Fall 2027**, working on one of the following directions:
-
-- Energy and power system modeling
-- Nuclear power
-- Climate policy
+We are recruiting **one Ph.D. student** to start in **Fall 2027**, working on energy and power system modeling, nuclear power, and climate policy.
 
 **Requirements**
 

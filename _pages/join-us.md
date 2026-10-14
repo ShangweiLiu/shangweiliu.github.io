@@ -59,5 +59,5 @@ NUS undergraduate and master's students are welcome to email us at any time. We 
 <div class="card card--row" markdown="1">
 ### Collaboration
 
-Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric modeling. If your work connects with any of these, please feel free to get in touch.
+Beyond these formal positions, we always welcome collaborations. Topics we are currently especially interested in include nuclear power, energy system modeling, trade and decarbonization, the impacts of space launch activities, and atmospheric chemistry modeling of transboundary air pollution from wildfires in Southeast Asia. If your work connects with any of these, please feel free to get in touch.
 </div>

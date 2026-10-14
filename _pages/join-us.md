@@ -1,6 +1,6 @@
 ---
 title: "Join Us"
-permalink: /opportunities/
+permalink: /join-us/
 layout: single
 hide_footer: true
 ---

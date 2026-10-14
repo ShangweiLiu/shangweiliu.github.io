@@ -788,6 +788,42 @@ html[data-theme="dark"] .masthead {
   .page__content &__links { margin: 0.6rem 0 0; }
 }
 
+/* Teaching
+   ========================================================================== */
+
+.course-list {
+  border-top: 1px solid var(--rule);
+}
+
+.course {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  column-gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+
+  .page__content &__term {
+    @extend %mono-label;
+    margin: 0.3rem 0 0;
+    color: var(--accent-warm);
+  }
+
+  .page__content &__code {
+    @extend %mono-label;
+    margin: 0 0 0.35rem;
+    color: var(--accent);
+  }
+
+  &__title,
+  .page__content &__title {
+    margin: 0;
+    font-family: $serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
 /* CV
    ========================================================================== */
 
@@ -879,6 +915,9 @@ html[data-theme="dark"] .site-footer {
    ========================================================================== */
 
 @media (max-width: 700px) {
+
+  .course { grid-template-columns: 1fr; row-gap: 0.5rem; }
+
 
   .card--row {
     grid-template-columns: 1fr;

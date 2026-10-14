@@ -1,12 +1,21 @@
 ---
-layout: archive
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
+layout: single
+hide_footer: true
 ---
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% comment %}Courses come from _data/teaching.yml.{% endcomment %}
+<div class="course-list">
+  {% for c in site.data.teaching %}
+  <article class="course">
+    <p class="course__term">{{ c.term }}</p>
+    <div>
+      <p class="course__code">{{ c.code }}</p>
+      <h3 class="course__title">{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+    </div>
+  </article>
+  {% endfor %}
+</div>

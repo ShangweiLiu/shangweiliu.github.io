@@ -42,9 +42,9 @@ We welcome applications from candidates who are applying for or interested in th
 </div>
 
 <div class="card card--row" markdown="1">
-### Visiting Scholars
+### Visiting Students and Scholars
 
-We welcome visiting scholars and students with aligned research interests. Self-funded visitors are welcome. Potential funding sources include:
+We welcome visiting students and scholars with aligned research interests. Self-funded visitors are welcome. Potential funding sources include:
 
 - [NUS Fellows Programme (Southeast Asia)](https://research.nus.edu.sg/nusri/nus-fellows-programme/)
 - [China Scholarship Council](https://www.csc.edu.cn/)

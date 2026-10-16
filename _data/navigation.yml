@@ -8,7 +8,9 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  # The group name on the left of the header already links home.
+  - title: "Home"
+    url: /
+
   - title: "People"
     url: /people/
 

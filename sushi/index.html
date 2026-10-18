@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>东坡行迹图</title>
+<meta name="description" content="苏轼一生十六处核心行迹地图：勾选你去过的地方，算出你的旅行含苏量。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  :root {
+    --paper: #f4ede0;
+    --paper-2: #ebe2d0;
+    --ink: #2b2620;
+    --ink-soft: #5c5348;
+    --line: #d3c6ad;
+    --ochre: #8b4a2b;
+    --home: #4a6b4f;
+    --office: #8b4a2b;
+    --exile: #2f3e55;
+    --end: #a3312a;
+    --gold: #b88a2e;
+    --serif: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.7;
+  }
+  .app { display: flex; height: 100vh; height: 100dvh; }
+  aside {
+    width: 380px; min-width: 0; flex: none; overflow-y: auto;
+    border-right: 1px solid var(--line);
+    padding: 28px 24px 40px;
+    background: var(--paper);
+  }
+  #map { flex: 1; background: var(--paper-2); }
+
+  h1 { font-size: 30px; letter-spacing: .18em; margin: 0 0 4px; font-weight: 700; }
+  .sub { color: var(--ink-soft); font-size: 14px; margin: 0 0 22px; }
+
+  .score {
+    border: 1px solid var(--line); border-radius: 4px;
+    padding: 18px 18px 14px; margin-bottom: 22px;
+    background: linear-gradient(#f8f3e8, #f1e8d6);
+  }
+  .score .label { font-size: 13px; color: var(--ink-soft); letter-spacing: .1em; }
+  .score .pct { font-size: 52px; font-weight: 700; color: var(--ochre); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .score .pct small { font-size: 22px; margin-left: 2px; }
+  .score .count { font-size: 14px; }
+  .bar { height: 4px; background: var(--line); border-radius: 2px; margin: 10px 0 10px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--ochre); transition: width .35s ease; }
+  .quip { font-size: 14px; color: var(--ink); margin: 0; min-height: 1.7em; }
+  .actions { display: flex; gap: 8px; margin-top: 12px; }
+  button {
+    font: inherit; font-size: 13px; cursor: pointer;
+    border: 1px solid var(--ochre); color: var(--ochre); background: transparent;
+    padding: 4px 12px; border-radius: 3px;
+  }
+  button:hover { background: var(--ochre); color: var(--paper); }
+  button.quiet { border-color: var(--line); color: var(--ink-soft); }
+  button.quiet:hover { background: var(--line); color: var(--ink); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; margin: 0 0 10px; color: var(--ink-soft); }
+  .legend span::before {
+    content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+    margin-right: 5px; vertical-align: 1px; background: var(--c);
+  }
+
+  ol.places { list-style: none; padding: 0; margin: 0 0 24px; border-top: 1px solid var(--line); }
+  ol.places li { border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; padding: 7px 2px; }
+  ol.places li .name { flex: 1; cursor: pointer; font-size: 15px; }
+  ol.places li .name:hover { color: var(--ochre); }
+  ol.places li .name em { font-style: normal; color: var(--ink-soft); font-size: 13px; margin-left: 4px; }
+  ol.places li .yr { font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .tag {
+    font-size: 11px; padding: 0 6px; border-radius: 2px; color: #fff; background: var(--c);
+    letter-spacing: .05em; white-space: nowrap;
+  }
+  input[type=checkbox] { accent-color: var(--ochre); width: 16px; height: 16px; cursor: pointer; margin: 0; }
+
+  details { border-top: 1px solid var(--line); padding: 10px 0; font-size: 14px; }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; letter-spacing: .08em; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "＋"; color: var(--ochre); margin-right: 6px; }
+  details[open] summary::before { content: "－"; }
+  details p, details ul { margin: 8px 0; }
+  details ul { padding-left: 1.2em; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 6px; }
+  th, td { text-align: left; padding: 4px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; color: var(--ink-soft); }
+  .formula { background: var(--paper-2); padding: 8px 10px; border-radius: 3px; text-align: center; }
+  footer { font-size: 12px; color: var(--ink-soft); margin-top: 22px; }
+
+  /* map */
+  .leaflet-container { font-family: var(--serif); background: var(--paper-2); }
+  .leaflet-tile-pane { filter: sepia(.45) saturate(.7) brightness(1.02) contrast(.95); }
+  .pin {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--c); border: 2px solid var(--paper);
+    box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    transition: transform .15s;
+  }
+  .pin.on { box-shadow: 0 0 0 3px var(--gold), 0 1px 4px rgba(0,0,0,.4); }
+  .pin-wrap:hover .pin { transform: scale(1.2); }
+  .pin-label {
+    position: absolute; left: 22px; top: -2px; white-space: nowrap;
+    font-size: 13px; font-weight: 600; color: var(--ink);
+    text-shadow: 0 0 3px var(--paper), 0 0 3px var(--paper), 0 0 3px var(--paper);
+    pointer-events: none;
+  }
+  .leaflet-popup-content-wrapper { background: #faf6ee; color: var(--ink); border-radius: 4px; border: 1px solid var(--line); box-shadow: 0 3px 14px rgba(60,40,20,.2); }
+  .leaflet-popup-tip { background: #faf6ee; }
+  .leaflet-popup-content { margin: 14px 16px; line-height: 1.7; width: 260px; }
+  .pop h3 { margin: 0 0 4px; font-size: 18px; }
+  .pop h3 em { font-style: normal; font-size: 13px; color: var(--ink-soft); font-weight: 400; }
+  .pop .meta { font-size: 12px; color: var(--ink-soft); margin-bottom: 6px; }
+  .pop p { margin: 0 0 10px; font-size: 14px; }
+  .pop label { display: flex; align-items: center; gap: 6px; font-size: 14px; cursor: pointer; border-top: 1px solid var(--line); padding-top: 8px; }
+  .leaflet-control-attribution { background: rgba(244,237,224,.85) !important; font-size: 11px; }
+
+  @media (max-width: 800px) {
+    .app { flex-direction: column-reverse; height: auto; }
+    #map { height: 62vh; flex: none; }
+    aside { width: 100%; border-right: 0; border-top: 1px solid var(--line); padding: 22px 16px 32px; overflow: visible; }
+    h1 { font-size: 26px; }
+    .leaflet-popup-content { width: 230px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h1>东坡行迹图</h1>
+    <p class="sub">苏轼（1037—1101）一生十六处核心行迹。勾选你去过的地方，看看你的“含苏量”。</p>
+
+    <section class="score" aria-live="polite">
+      <div class="label">旅行含苏量</div>
+      <div class="pct"><span id="pct">0</span><small>%</small></div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="count">你勾选了 <b id="cnt">0</b> / 16 个地点</div>
+      <p class="quip" id="quip"></p>
+      <div class="actions">
+        <button id="copy">复制结果</button>
+        <button id="reset" class="quiet">清空</button>
+      </div>
+    </section>
+
+    <div class="legend" id="legend"></div>
+    <ol class="places" id="list"></ol>
+
+    <details>
+      <summary>关于本图</summary>
+      <p>本图展示苏轼一生中长期任职、贬居、出生成长及终老的核心地点，共 16 处。</p>
+      <p>苏轼一生行迹远不止于此。有研究统计其涉足州府逾百处，但大量地点仅为途经、短暂停留或仅有诗文留痕，缺乏明确的居住或任职记录。为保证“含苏量”分数的区分度与数据可靠性，本图不将途经地纳入统计。</p>
+    </details>
+    <details>
+      <summary>核心地点筛选标准</summary>
+      <p>一个地点被收录，需满足以下条件之一：</p>
+      <ul>
+        <li><b>家乡</b>：出生并成长至成年（眉山）</li>
+        <li><b>任职</b>：有明确任命记录，且实际到任履职（开封、凤翔、杭州、密州、徐州、湖州、登州、颍州、扬州、定州）</li>
+        <li><b>贬谪</b>：有明确贬谪诏令，且实际居住（黄州、惠州、儋州、廉州）</li>
+        <li><b>终老</b>：获赦北归后的最终居所与病逝地（常州）</li>
+      </ul>
+      <p>仅途经、短暂逗留（如数日）、或仅留下诗文但无居住/任职记录的地点，均不计入。</p>
+    </details>
+    <details>
+      <summary>“含苏量”算法</summary>
+      <p class="formula">含苏量 = 你勾选的核心地点数量 ÷ 16 × 100%</p>
+      <p>分母固定为 16，即本图收录的全部核心行迹地。勾选越多，含苏量越高。</p>
+      <p>本算法采用等权计算，即每个核心地点权重相同。未按停留时长加权，原因是部分地点（如颍州、扬州）的精确停留月数史料记载不足，加权会导致数据基础不均。</p>
+    </details>
+    <details>
+      <summary>各地点停留时间参考</summary>
+      <p>供了解，不参与计算。</p>
+      <table>
+        <thead><tr><th>地点</th><th>类型</th><th>停留时长（约）</th><th>依据</th></tr></thead>
+        <tbody id="stay"></tbody>
+      </table>
+    </details>
+    <details>
+      <summary>数据来源说明</summary>
+      <p>地点类型与事件描述综合参考李常生苏轼行踪研究、王兆鹏《唐宋文学编年地图》及相关史料。停留时长仅供参考，部分为估算值。如需精确考据，请查阅原始文献。</p>
+    </details>
+
+    <footer>底图：高德地图。勾选记录仅保存在你自己的浏览器中。</footer>
+  </aside>
+  <div id="map" role="application" aria-label="苏轼行迹地图"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// ===== 数据：可直接修改 =====
+const TYPES = {
+  home:   { name: "家乡", color: "var(--home)" },
+  office: { name: "任职", color: "var(--office)" },
+  exile:  { name: "贬谪", color: "var(--exile)" },
+  end:    { name: "终老", color: "var(--end)" }
+};
+
+// 按首次到达先后排列
+const PLACES = [
+  { id: "meishan",  name: "眉山", now: "四川眉山", type: "home",   year: "1037", lat: 30.05, lng: 103.85,
+    stay: "约 21 年", basis: "出生至出蜀",
+    desc: "景祐三年（1037）生于眉州眉山。随父苏洵、弟苏辙读书成长，后父子三人并称“三苏”。嘉祐元年（1056）出蜀赴京应试。" },
+  { id: "kaifeng",  name: "开封", now: "东京汴梁", type: "office", year: "1057", lat: 34.80, lng: 114.31,
+    stay: "累计约 12 年", basis: "多次入京任职",
+    desc: "嘉祐二年（1057）进士及第，此后多次在朝任职。元祐年间任翰林学士、知制诰，官至礼部尚书。乌台诗案时亦下狱于京城御史台。" },
+  { id: "fengxiang",name: "凤翔", now: "陕西宝鸡凤翔", type: "office", year: "1061", lat: 34.52, lng: 107.39,
+    stay: "约 3 年", basis: "1061—1064",
+    desc: "初入仕途，任凤翔府签书判官。疏浚东湖，作《喜雨亭记》《凤翔八观》。" },
+  { id: "hangzhou", name: "杭州", now: "浙江杭州", type: "office", year: "1071", lat: 30.25, lng: 120.16,
+    stay: "约 5 年半", basis: "通判+知州两任",
+    desc: "熙宁四年（1071）通判杭州，写下“欲把西湖比西子”。元祐四年（1089）再任知州，疏浚西湖、筑起长堤，后人称之为“苏堤”。" },
+  { id: "mizhou",   name: "密州", now: "山东诸城", type: "office", year: "1074", lat: 35.99, lng: 119.41,
+    stay: "约 2 年", basis: "1074—1076",
+    desc: "任知州，治蝗救灾、收养弃婴。作《江城子·密州出猎》，熙宁九年中秋作《水调歌头·明月几时有》。" },
+  { id: "xuzhou",   name: "徐州", now: "江苏徐州", type: "office", year: "1077", lat: 34.26, lng: 117.18,
+    stay: "约 2 年", basis: "1077—1079",
+    desc: "任知州时黄河决口、洪水围城，苏轼亲率军民筑堤抗洪，保全徐州城。水退后建黄楼以作纪念。" },
+  { id: "huzhou",   name: "湖州", now: "浙江湖州", type: "office", year: "1079", lat: 30.87, lng: 120.09,
+    stay: "约 3 个月", basis: "到任即被捕",
+    desc: "元丰二年（1079）知湖州，到任约三个月，即因诗文被劾“谤讪朝政”，在州衙被捕押解进京，史称“乌台诗案”。" },
+  { id: "huangzhou",name: "黄州", now: "湖北黄冈", type: "exile",  year: "1080", lat: 30.45, lng: 114.87,
+    stay: "约 4 年", basis: "乌台诗案后贬居",
+    desc: "乌台诗案后贬为黄州团练副使，贬居四年余。躬耕东坡，自号“东坡居士”，写下前后《赤壁赋》《念奴娇·赤壁怀古》与《寒食帖》。" },
+  { id: "dengzhou", name: "登州", now: "山东蓬莱", type: "office", year: "1085", lat: 37.81, lng: 120.76,
+    stay: "5 天", basis: "到任五日即召还",
+    desc: "元丰八年（1085）知登州，到任五日即被召还朝。短短数日间仍留心海防与民生，并作《海市》诗，有“五日登州府”之说。" },
+  { id: "yingzhou", name: "颍州", now: "安徽阜阳", type: "office", year: "1091", lat: 32.89, lng: 115.81,
+    stay: "约半年", basis: "史料未载精确月数",
+    desc: "元祐六年（1091）知颍州，这里也是恩师欧阳修晚年退居之地。在任期间疏浚颍州西湖，兴修水利。" },
+  { id: "yangzhou", name: "扬州", now: "江苏扬州", type: "office", year: "1092", lat: 32.39, lng: 119.42,
+    stay: "较短", basis: "史料未载精确月数",
+    desc: "元祐七年（1092）知扬州，奏罢劳民伤财的“万花会”，并在欧阳修所建的平山堂追怀恩师。" },
+  { id: "dingzhou", name: "定州", now: "河北定州", type: "office", year: "1093", lat: 38.52, lng: 114.99,
+    stay: "约 1—8 个月", basis: "史料有分歧",
+    desc: "元祐八年（1093）知定州，地处北宋边防前线。整肃军纪、修缮营房，不久新党复起，被贬岭南。" },
+  { id: "huizhou",  name: "惠州", now: "广东惠州", type: "exile",  year: "1094", lat: 23.11, lng: 114.42,
+    stay: "约 2 年半", basis: "再贬儋州前",
+    desc: "绍圣元年（1094）贬惠州，捐资助修东、西新桥。写下“日啖荔枝三百颗，不辞长作岭南人”。" },
+  { id: "danzhou",  name: "儋州", now: "海南儋州", type: "exile",  year: "1097", lat: 19.70, lng: 109.33,
+    stay: "约 3 年", basis: "1097—1100",
+    desc: "绍圣四年（1097）年逾六旬再贬海南，结茅为“桄榔庵”。在此兴学授徒、传播中原文化，自称“我本儋耳人”。" },
+  { id: "lianzhou", name: "廉州", now: "广西合浦", type: "exile",  year: "1100", lat: 21.66, lng: 109.21,
+    stay: "短暂", basis: "量移后继续北归",
+    desc: "元符三年（1100）徽宗即位遇赦，内迁廉州安置。居留时间不长，随即继续北归。" },
+  { id: "changzhou",name: "常州", now: "江苏常州", type: "end",    year: "1101", lat: 31.78, lng: 119.95,
+    stay: "较短", basis: "北归后病逝",
+    desc: "建中靖国元年（1101）北归途中病重，七月卒于常州，终年六十六岁。此前在镇江金山自题画像：“问汝平生功业，黄州惠州儋州。”" }
+];
+
+const TOTAL = PLACES.length; // 16
+
+const QUIPS = [
+  [0,   "尚未相交。不妨从杭州西湖开始？"],
+  [1,   "已有一面之缘。“人生到处知何似，应似飞鸿踏雪泥。”"],
+  [25,  "你和苏轼的人生重合度渐深，可称一位东坡同路人。"],
+  [50,  "过半了！苏轼走过的路，你已走了大半。"],
+  [75,  "资深东坡迷。“此心安处是吾乡。”"],
+  [100, "全收集！你几乎重走了东坡一生。“问汝平生功业，黄州惠州儋州。”"]
+];
+
+// ===== 状态 =====
+const KEY = "sushi-visited-v1";
+let visited = new Set();
+try { visited = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch (e) {}
+function save() { try { localStorage.setItem(KEY, JSON.stringify([...visited])); } catch (e) {} }
+
+// ===== 地图 =====
+const map = L.map("map", { zoomControl: true, minZoom: 4, maxZoom: 12 }).setView([30.5, 113.5], 5);
+// 高德底图：ltype=3 = 底色 + 水系与行政边界，不含地名注记，避免与标记重叠
+L.tileLayer("https://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7&ltype=3", {
+  subdomains: "1234",
+  attribution: "底图 &copy; 高德地图"
+}).addTo(map);
+
+const markers = {};
+function pinIcon(p) {
+  const on = visited.has(p.id) ? " on" : "";
+  return L.divIcon({
+    className: "pin-wrap",
+    html: `<div class="pin${on}" style="--c:${TYPES[p.type].color}"></div><span class="pin-label">${p.name}</span>`,
+    iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -10]
+  });
+}
+function popupHTML(p) {
+  const t = TYPES[p.type];
+  return `<div class="pop">
+    <h3>${p.name}<em>（${p.now}）</em></h3>
+    <div class="meta"><span class="tag" style="--c:${t.color}">${t.name}</span>　${p.year} 年起 · 停留${p.stay}</div>
+    <p>${p.desc}</p>
+    <label><input type="checkbox" data-id="${p.id}" ${visited.has(p.id) ? "checked" : ""}> 我去过这里</label>
+  </div>`;
+}
+PLACES.forEach(p => {
+  const m = L.marker([p.lat, p.lng], { icon: pinIcon(p), title: p.name, riseOnHover: true })
+    .bindPopup(() => popupHTML(p), { maxWidth: 300 })
+    .addTo(map);
+  markers[p.id] = m;
+});
+map.fitBounds(L.latLngBounds(PLACES.map(p => [p.lat, p.lng])).pad(0.12));
+
+// ===== 侧栏 =====
+document.getElementById("legend").innerHTML =
+  Object.values(TYPES).map(t => `<span style="--c:${t.color}">${t.name}</span>`).join("");
+
+document.getElementById("list").innerHTML = PLACES.map(p => `
+  <li>
+    <input type="checkbox" data-id="${p.id}" aria-label="我去过${p.name}">
+    <span class="name" data-go="${p.id}">${p.name}<em>${p.now}</em></span>
+    <span class="yr">${p.year}</span>
+    <span class="tag" style="--c:${TYPES[p.type].color}">${TYPES[p.type].name}</span>
+  </li>`).join("");
+
+document.getElementById("stay").innerHTML = PLACES.map(p =>
+  `<tr><td>${p.name}</td><td>${TYPES[p.type].name}</td><td>${p.stay}</td><td>${p.basis}</td></tr>`).join("");
+
+function render() {
+  const n = visited.size;
+  const pct = Math.round(n / TOTAL * 1000) / 10; // 一位小数
+  document.getElementById("cnt").textContent = n;
+  document.getElementById("pct").textContent = Number.isInteger(pct) ? pct : pct.toFixed(1);
+  document.getElementById("bar").style.width = (n / TOTAL * 100) + "%";
+  // 第一档要求至少勾选 1 个，其余按百分比门槛取最高一档
+  const raw = n / TOTAL * 100;
+  let quip = QUIPS[0][1];
+  if (n > 0) for (const [min, text] of QUIPS.slice(1)) if (raw >= min || min === 1) quip = text;
+  document.getElementById("quip").textContent = `你和苏轼的人生重合度：${document.getElementById("pct").textContent}%。${quip}`;
+  document.querySelectorAll('input[type=checkbox][data-id]').forEach(cb => { cb.checked = visited.has(cb.dataset.id); });
+  PLACES.forEach(p => {
+    const el = markers[p.id].getElement();
+    if (el) el.querySelector(".pin").classList.toggle("on", visited.has(p.id));
+  });
+}
+
+document.addEventListener("change", e => {
+  const cb = e.target.closest('input[type=checkbox][data-id]');
+  if (!cb) return;
+  cb.checked ? visited.add(cb.dataset.id) : visited.delete(cb.dataset.id);
+  save(); render();
+});
+
+document.getElementById("list").addEventListener("click", e => {
+  const go = e.target.closest("[data-go]");
+  if (!go) return;
+  const p = PLACES.find(x => x.id === go.dataset.go);
+  map.flyTo([p.lat, p.lng], Math.max(map.getZoom(), 7), { duration: .8 });
+  markers[p.id].openPopup();
+  if (window.innerWidth <= 800) document.getElementById("map").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!visited.size || !confirm("清空所有勾选？")) return;
+  visited.clear(); save(); render();
+});
+
+document.getElementById("copy").addEventListener("click", async () => {
+  const names = PLACES.filter(p => visited.has(p.id)).map(p => p.name).join("、") || "暂无";
+  const text = `我的旅行含苏量：${document.getElementById("pct").textContent}%（${visited.size}/16）\n去过：${names}\n${location.href}`;
+  const btn = document.getElementById("copy");
+  try { await navigator.clipboard.writeText(text); btn.textContent = "已复制"; }
+  catch (e) { prompt("复制以下内容：", text); }
+  setTimeout(() => btn.textContent = "复制结果", 1500);
+});
+
+render();
+</script>
+</body>
+</html>

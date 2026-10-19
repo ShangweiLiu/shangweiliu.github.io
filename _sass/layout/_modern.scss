@@ -430,13 +430,11 @@ html[data-theme="dark"] .masthead {
     list-style: none;
     margin: 0;
     padding: 0;
-    border-top: 1px solid var(--rule);
   }
 
   .page__content &__list li {
     margin: 0;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid var(--rule);
+    padding: 0.3rem 0;
     font-size: 14.5px;
     line-height: 1.5;
     color: var(--ink-2);

@@ -17,7 +17,7 @@ redirect_from:
     <p class="hero__lead">We use interdisciplinary system modeling to inform decision-making in energy transitions, climate governance, and industrial policy.</p>
   </div>
   <aside class="spirit" aria-labelledby="spirit-title">
-    <h2 class="spirit__title" id="spirit-title">Spirit of our work</h2>
+    <h2 class="spirit__title" id="spirit-title">Ethos of our work</h2>
     <ol class="spirit__list">
       <li><strong>Big questions.</strong> Grand challenges for sustainability, human welfare, and equity.</li>
       <li><strong>Years to decades.</strong> Not months, not centuries. Long enough to matter, near enough to act on.</li>

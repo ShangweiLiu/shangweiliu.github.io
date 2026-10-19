@@ -21,6 +21,7 @@
     --office: #8b4a2b;
     --exile: #2f3e55;
     --end: #a3312a;
+    --pass: #8a7860;
     --gold: #b88a2e;
     --serif: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
   }
@@ -42,6 +43,8 @@
   #map { flex: 1; background: var(--paper-2); }
 
   h1 { font-size: 30px; letter-spacing: .18em; margin: 0 0 4px; font-weight: 700; }
+  .intro { font-size: 15px; margin: 6px 0 4px; color: var(--ochre); }
+  .intro b { font-weight: 600; }
   .sub { color: var(--ink-soft); font-size: 14px; margin: 0 0 22px; }
 
   .score {
@@ -72,6 +75,8 @@
     margin-right: 5px; vertical-align: 1px; background: var(--c);
   }
 
+  h2.group { font-size: 15px; letter-spacing: .1em; margin: 14px 0 6px; }
+  h2.group small { font-weight: 400; font-size: 12px; color: var(--ink-soft); letter-spacing: 0; margin-left: 6px; }
   ol.places { list-style: none; padding: 0; margin: 0 0 24px; border-top: 1px solid var(--line); }
   ol.places li { border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; padding: 7px 2px; }
   ol.places li .name { flex: 1; cursor: pointer; font-size: 15px; }
@@ -108,6 +113,10 @@
     transition: transform .15s;
   }
   .pin.on { box-shadow: 0 0 0 3px var(--gold), 0 1px 4px rgba(0,0,0,.4); }
+  .pin.pass { width: 11px; height: 11px; background: var(--paper); border: 2.5px solid var(--pass); box-shadow: none; }
+  .pin.pass.on { background: var(--pass); box-shadow: 0 0 0 2.5px var(--gold); }
+  .pin-label.pass { left: 15px; top: -6px; font-size: 12px; font-weight: 400; color: var(--ink-soft); }
+  .zoom-out .pin-label.pass { display: none; }
   .pin-wrap:hover .pin { transform: scale(1.2); }
   .pin-label {
     position: absolute; left: 22px; top: -2px; white-space: nowrap;
@@ -138,50 +147,56 @@
 <div class="app">
   <aside>
     <h1>东坡行迹图</h1>
-    <p class="sub">苏轼（1037—1101）一生十六处核心行迹。勾选你去过的地方，看看你的“含苏量”。</p>
+    <p class="intro"><b>2037 年，苏轼诞辰一千年</b><span id="countdown"></span>。</p>
+    <p class="sub">一千年前，他从眉山出发，宦游四方，一贬再贬，直到天涯海角的儋州。在千年之约到来之前，不妨走一走东坡走过的路。勾选你去过的地方，看看你的“含苏量”。</p>
 
     <section class="score" aria-live="polite">
       <div class="label">旅行含苏量</div>
       <div class="pct"><span id="pct">0</span><small>%</small></div>
       <div class="bar"><i id="bar"></i></div>
-      <div class="count">你勾选了 <b id="cnt">0</b> / 16 个地点</div>
+      <div class="count">核心地 <b id="cnt-core">0</b> / 16 · 途经地 <b id="cnt-pass">0</b> / 16</div>
       <p class="quip" id="quip"></p>
       <div class="actions">
         <button id="copy">复制结果</button>
+        <button id="select-all" class="quiet">全选</button>
         <button id="reset" class="quiet">清空</button>
       </div>
     </section>
 
     <div class="legend" id="legend"></div>
-    <ol class="places" id="list"></ol>
+    <h2 class="group">核心行迹 <small>16 处 · 按停留时间加权，共 84%</small></h2>
+    <ol class="places" id="list-core"></ol>
+    <h2 class="group">途经地 <small>16 处 · 每处 1%</small></h2>
+    <ol class="places" id="list-pass"></ol>
 
     <details>
       <summary>关于本图</summary>
-      <p>本图展示苏轼一生中长期任职、贬居、出生成长及终老的核心地点，共 16 处。</p>
-      <p>苏轼一生行迹远不止于此。有研究统计其涉足州府逾百处，但大量地点仅为途经、短暂停留或仅有诗文留痕，缺乏明确的居住或任职记录。为保证“含苏量”分数的区分度与数据可靠性，本图不将途经地纳入统计。</p>
+      <p>本图展示苏轼一生中长期任职、贬居、出生成长及终老的核心地点 16 处，以及有明确到访记载、留下重要诗文或事迹的途经地 16 处。</p>
+      <p>苏轼一生行迹远不止于此。有研究统计其涉足州府逾百处，其中大量地点仅为途经，或仅有诗文留痕。本图只从中选取史料记载明确、事迹知名度较高的途经地，并给予较低的权重，以保证“含苏量”主要反映与苏轼人生主线的重合程度。</p>
     </details>
     <details>
-      <summary>核心地点筛选标准</summary>
-      <p>一个地点被收录，需满足以下条件之一：</p>
+      <summary>地点筛选标准</summary>
+      <p><b>核心地点</b>需满足以下条件之一：</p>
       <ul>
         <li><b>家乡</b>：出生并成长至成年（眉山）</li>
         <li><b>任职</b>：有明确任命记录，且实际到任履职（开封、凤翔、杭州、密州、徐州、湖州、登州、颍州、扬州、定州）</li>
         <li><b>贬谪</b>：有明确贬谪诏令，且实际居住（黄州、惠州、儋州、廉州）</li>
         <li><b>终老</b>：获赦北归后的最终居所与病逝地（常州）</li>
       </ul>
-      <p>仅途经、短暂逗留（如数日）、或仅留下诗文但无居住/任职记录的地点，均不计入。</p>
+      <p><b>途经地</b>：无居住或任职记录，但有明确到访记载，并留下知名诗文或重要事迹（如庐山《题西林壁》、江宁会王安石、雷州与苏辙诀别）。</p>
+      <p>未列入的途经地并非苏轼未曾到访，只是为控制数量而未收录。</p>
     </details>
     <details>
       <summary>“含苏量”算法</summary>
-      <p class="formula">含苏量 = 你勾选的核心地点数量 ÷ 16 × 100%</p>
-      <p>分母固定为 16，即本图收录的全部核心行迹地。勾选越多，含苏量越高。</p>
-      <p>本算法采用等权计算，即每个核心地点权重相同。未按停留时长加权，原因是部分地点（如颍州、扬州）的精确停留月数史料记载不足，加权会导致数据基础不均。</p>
+      <p class="formula">含苏量 = 所勾核心地的停留时间占比 × 84% + 途经地数 × 1%</p>
+      <p>途经地每处计 1%，16 处合计 16%；其余 84% 按苏轼在 16 处核心地的停留时间分配，待得越久占比越高，例如眉山约 21 年、开封累计约 12 年，登州只有 5 天。全部勾选恰为 100%。</p>
+      <p>部分地点史料只记“较短”“短暂”或说法不一（扬州、定州、廉州、常州），按估算月数计入，见下表中带 * 的数值。</p>
     </details>
     <details>
       <summary>各地点停留时间参考</summary>
-      <p>供了解，不参与计算。</p>
+      <p>核心地按下表“计入”的月数加权。</p>
       <table>
-        <thead><tr><th>地点</th><th>类型</th><th>停留时长（约）</th><th>依据</th></tr></thead>
+        <thead><tr><th>地点</th><th>类型</th><th>停留时长（约）</th><th>计入</th><th>权重</th><th>依据</th></tr></thead>
         <tbody id="stay"></tbody>
       </table>
     </details>
@@ -202,7 +217,8 @@ const TYPES = {
   home:   { name: "家乡", color: "var(--home)" },
   office: { name: "任职", color: "var(--office)" },
   exile:  { name: "贬谪", color: "var(--exile)" },
-  end:    { name: "终老", color: "var(--end)" }
+  end:    { name: "终老", color: "var(--end)" },
+  pass:   { name: "途经", color: "var(--pass)" }
 };
 
 // 按首次到达先后排列
@@ -254,10 +270,64 @@ const PLACES = [
     desc: "元符三年（1100）徽宗即位遇赦，内迁廉州安置。居留时间不长，随即继续北归。" },
   { id: "changzhou",name: "常州", now: "江苏常州", type: "end",    year: "1101", lat: 31.78, lng: 119.95,
     stay: "较短", basis: "北归后病逝",
-    desc: "建中靖国元年（1101）北归途中病重，七月卒于常州，终年六十六岁。此前在镇江金山自题画像：“问汝平生功业，黄州惠州儋州。”" }
+    desc: "建中靖国元年（1101）北归途中病重，七月卒于常州，终年六十六岁。" }
 ];
 
-const TOTAL = PLACES.length; // 16
+// 途经地：无居住/任职记录，但有明确到访记载与知名诗文或事迹
+const PASSES = [
+  { id: "chengdu",  name: "成都", now: "四川成都", year: "1056", lat: 30.66, lng: 104.07,
+    desc: "出蜀之前，随父苏洵至成都拜谒益州知州张方平，深得赏识，张方平作书向欧阳修举荐。" },
+  { id: "jiangling",name: "江陵", now: "湖北荆州", year: "1059", lat: 30.33, lng: 112.24,
+    desc: "嘉祐四年（1059）三苏舟行出蜀，沿长江东下至江陵，将沿途所作诗文合编为《南行集》。" },
+  { id: "xiangyang",name: "襄阳", now: "湖北襄阳", year: "1060", lat: 32.01, lng: 112.12,
+    desc: "嘉祐五年（1060）自江陵改走陆路北上赴京，途经襄阳，作《襄阳古乐府》等诗。" },
+  { id: "shangqiu", name: "南都", now: "河南商丘", year: "1079", lat: 34.41, lng: 115.65,
+    desc: "宋时为应天府南京。苏轼多次途经，拜谒恩公张方平，并与在此任职的苏辙相聚。" },
+  { id: "lushan",   name: "庐山", now: "江西九江", year: "1084", lat: 29.56, lng: 115.98,
+    desc: "元丰七年（1084）离开黄州后游庐山，作《题西林壁》：“不识庐山真面目，只缘身在此山中。”" },
+  { id: "yunzhou",  name: "筠州", now: "江西高安", year: "1084", lat: 28.42, lng: 115.37,
+    desc: "元丰七年（1084）离开黄州后，专程前往筠州探望贬居于此的弟弟苏辙。" },
+  { id: "jiangning",name: "江宁", now: "江苏南京", year: "1084", lat: 32.06, lng: 118.80,
+    desc: "元丰七年（1084）途经江宁，与退居钟山的王安石相会，同游唱和，昔日政见之争至此释怀。" },
+  { id: "yixing",   name: "宜兴", now: "江苏宜兴", year: "1084", lat: 31.36, lng: 119.82,
+    desc: "古称阳羡。元丰七年（1084）在此买田，有“买田阳羡吾将老”之句，后上表乞居常州。" },
+  { id: "zhenjiang",name: "金山", now: "江苏镇江", year: "1101", lat: 32.22, lng: 119.42,
+    desc: "多次登临镇江金山寺。建中靖国元年（1101）北归经此，自题画像：“问汝平生功业，黄州惠州儋州。”" },
+  { id: "ganzhou",  name: "虔州", now: "江西赣州", year: "1094", lat: 25.83, lng: 114.93,
+    desc: "绍圣元年（1094）南贬途经赣江十八滩，作《八月七日初入赣过惶恐滩》；北归时又在虔州停留。" },
+  { id: "dayu",     name: "大庾岭", now: "广东南雄梅关", year: "1094", lat: 25.29, lng: 114.29,
+    desc: "绍圣元年（1094）南贬翻越大庾岭进入岭南，作《过大庾岭》；七年后北归，又从此岭返回中原。" },
+  { id: "nanhua",   name: "南华寺", now: "广东韶关", year: "1094", lat: 24.67, lng: 113.60,
+    desc: "南贬途中至曹溪南华寺，礼谒禅宗六祖惠能真身，留有诗文。" },
+  { id: "yingzhou2",name: "英州", now: "广东英德", year: "1094", lat: 24.19, lng: 113.40,
+    desc: "绍圣元年（1094）先被贬知英州，赴任途中再遭追贬为惠州安置，遂经英州继续南下。" },
+  { id: "guangzhou",name: "广州", now: "广东广州", year: "1094", lat: 23.13, lng: 113.26,
+    desc: "赴惠州途经广州，游蒲涧寺、白云山。后在惠州致书广州知州王古，建议以竹管引蒲涧山泉入城。北归时再经广州。" },
+  { id: "leizhou",  name: "雷州", now: "广东雷州", year: "1097", lat: 20.91, lng: 110.09,
+    desc: "绍圣四年（1097）与同遭贬谪的苏辙同行至雷州，兄弟作别后渡海赴儋州。此后二人再未相见。" },
+  { id: "zhenzhou", name: "真州", now: "江苏仪征", year: "1101", lat: 32.27, lng: 119.18,
+    desc: "建中靖国元年（1101）北归途中在真州病倒，随后转往常州。" }
+].map(p => ({ ...p, type: "pass" }));
+
+const ALL = [...PLACES, ...PASSES];
+
+// 核心地按停留月数加权，合计 84%；途经地每处 1%，16 处合计 16%。
+// 带 * 的为估算值（史料只记“较短”“短暂”或说法不一）。
+const MONTHS = {
+  meishan: 252, kaifeng: 144, fengxiang: 36, hangzhou: 66, mizhou: 24, xuzhou: 24,
+  huzhou: 3, huangzhou: 48, dengzhou: 5 / 30, yingzhou: 6,
+  yangzhou: 6,   // * 较短，按约半年计
+  dingzhou: 6,   // * 约 1—8 个月，按约半年计
+  huizhou: 30, danzhou: 36,
+  lianzhou: 2,   // * 短暂，按约 2 个月计
+  changzhou: 1.5 // * 较短，按约 1.5 个月计
+};
+const ESTIMATED = new Set(["yangzhou", "dingzhou", "lianzhou", "changzhou"]);
+const CORE_TOTAL = 84, W_PASS = 1;
+const TOTAL_MONTHS = PLACES.reduce((s, p) => s + MONTHS[p.id], 0);
+const weight = p => p.type === "pass" ? W_PASS : MONTHS[p.id] / TOTAL_MONTHS * CORE_TOTAL;
+const fmt = x => String(Math.round(x * 100) / 100);
+const monthsLabel = p => (p.id === "dengzhou" ? "5 天" : `${fmt(MONTHS[p.id])} 个月`) + (ESTIMATED.has(p.id) ? " *" : "");
 
 const QUIPS = [
   [0,   "尚未相交。不妨从杭州西湖开始？"],
@@ -285,57 +355,75 @@ L.tileLayer("https://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=
 const markers = {};
 function pinIcon(p) {
   const on = visited.has(p.id) ? " on" : "";
+  const pass = p.type === "pass" ? " pass" : "";
+  const size = pass ? 11 : 18;
   return L.divIcon({
     className: "pin-wrap",
-    html: `<div class="pin${on}" style="--c:${TYPES[p.type].color}"></div><span class="pin-label">${p.name}</span>`,
-    iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -10]
+    html: `<div class="pin${pass}${on}" style="--c:${TYPES[p.type].color}"></div><span class="pin-label${pass}">${p.name}</span>`,
+    iconSize: [size, size], iconAnchor: [size / 2, size / 2], popupAnchor: [0, -size / 2 - 1]
   });
 }
 function popupHTML(p) {
   const t = TYPES[p.type];
+  const meta = p.type === "pass" ? `${p.year} 年 · 计 1%` : `${p.year} 年起 · 停留${p.stay} · 计 ${fmt(weight(p))}%`;
   return `<div class="pop">
     <h3>${p.name}<em>（${p.now}）</em></h3>
-    <div class="meta"><span class="tag" style="--c:${t.color}">${t.name}</span>　${p.year} 年起 · 停留${p.stay}</div>
+    <div class="meta"><span class="tag" style="--c:${t.color}">${t.name}</span>　${meta}</div>
     <p>${p.desc}</p>
     <label><input type="checkbox" data-id="${p.id}" ${visited.has(p.id) ? "checked" : ""}> 我去过这里</label>
   </div>`;
 }
-PLACES.forEach(p => {
-  const m = L.marker([p.lat, p.lng], { icon: pinIcon(p), title: p.name, riseOnHover: true })
-    .bindPopup(() => popupHTML(p), { maxWidth: 300 })
-    .addTo(map);
+ALL.forEach(p => {
+  const m = L.marker([p.lat, p.lng], {
+    icon: pinIcon(p), title: p.name, riseOnHover: true,
+    zIndexOffset: p.type === "pass" ? -1000 : 0 // 核心地标记压在途经地之上
+  }).bindPopup(() => popupHTML(p), { maxWidth: 300 }).addTo(map);
   markers[p.id] = m;
 });
-map.fitBounds(L.latLngBounds(PLACES.map(p => [p.lat, p.lng])).pad(0.12));
+map.fitBounds(L.latLngBounds(ALL.map(p => [p.lat, p.lng])).pad(0.1));
+
+// 缩放较小时隐藏途经地名，避免与核心地名重叠
+const mapEl = document.getElementById("map");
+function syncZoomClass() { mapEl.classList.toggle("zoom-out", map.getZoom() < 7); }
+map.on("zoomend", syncZoomClass);
+syncZoomClass();
 
 // ===== 侧栏 =====
 document.getElementById("legend").innerHTML =
   Object.values(TYPES).map(t => `<span style="--c:${t.color}">${t.name}</span>`).join("");
 
-document.getElementById("list").innerHTML = PLACES.map(p => `
+const itemHTML = p => `
   <li>
     <input type="checkbox" data-id="${p.id}" aria-label="我去过${p.name}">
     <span class="name" data-go="${p.id}">${p.name}<em>${p.now}</em></span>
     <span class="yr">${p.year}</span>
     <span class="tag" style="--c:${TYPES[p.type].color}">${TYPES[p.type].name}</span>
-  </li>`).join("");
+  </li>`;
+document.getElementById("list-core").innerHTML = PLACES.map(itemHTML).join("");
+document.getElementById("list-pass").innerHTML = PASSES.map(itemHTML).join("");
 
 document.getElementById("stay").innerHTML = PLACES.map(p =>
-  `<tr><td>${p.name}</td><td>${TYPES[p.type].name}</td><td>${p.stay}</td><td>${p.basis}</td></tr>`).join("");
+  `<tr><td>${p.name}</td><td>${TYPES[p.type].name}</td><td>${p.stay}</td><td>${monthsLabel(p)}</td><td>${fmt(weight(p))}%</td><td>${p.basis}</td></tr>`).join("");
+
+function score() {
+  const nc = PLACES.filter(p => visited.has(p.id)).length;
+  const np = PASSES.filter(p => visited.has(p.id)).length;
+  const pct = ALL.filter(p => visited.has(p.id)).reduce((s, p) => s + weight(p), 0);
+  return { nc, np, pct: Math.min(100, pct) };
+}
 
 function render() {
-  const n = visited.size;
-  const pct = Math.round(n / TOTAL * 1000) / 10; // 一位小数
-  document.getElementById("cnt").textContent = n;
-  document.getElementById("pct").textContent = Number.isInteger(pct) ? pct : pct.toFixed(1);
-  document.getElementById("bar").style.width = (n / TOTAL * 100) + "%";
+  const { nc, np, pct } = score();
+  document.getElementById("cnt-core").textContent = nc;
+  document.getElementById("cnt-pass").textContent = np;
+  document.getElementById("pct").textContent = fmt(pct);
+  document.getElementById("bar").style.width = pct + "%";
   // 第一档要求至少勾选 1 个，其余按百分比门槛取最高一档
-  const raw = n / TOTAL * 100;
   let quip = QUIPS[0][1];
-  if (n > 0) for (const [min, text] of QUIPS.slice(1)) if (raw >= min || min === 1) quip = text;
-  document.getElementById("quip").textContent = `你和苏轼的人生重合度：${document.getElementById("pct").textContent}%。${quip}`;
+  if (nc + np > 0) for (const [min, text] of QUIPS.slice(1)) if (pct >= min || min === 1) quip = text;
+  document.getElementById("quip").textContent = `你和苏轼的人生重合度：${fmt(pct)}%。${quip}`;
   document.querySelectorAll('input[type=checkbox][data-id]').forEach(cb => { cb.checked = visited.has(cb.dataset.id); });
-  PLACES.forEach(p => {
+  ALL.forEach(p => {
     const el = markers[p.id].getElement();
     if (el) el.querySelector(".pin").classList.toggle("on", visited.has(p.id));
   });
@@ -348,13 +436,18 @@ document.addEventListener("change", e => {
   save(); render();
 });
 
-document.getElementById("list").addEventListener("click", e => {
+document.querySelector("aside").addEventListener("click", e => {
   const go = e.target.closest("[data-go]");
   if (!go) return;
-  const p = PLACES.find(x => x.id === go.dataset.go);
+  const p = ALL.find(x => x.id === go.dataset.go);
   map.flyTo([p.lat, p.lng], Math.max(map.getZoom(), 7), { duration: .8 });
   markers[p.id].openPopup();
   if (window.innerWidth <= 800) document.getElementById("map").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("select-all").addEventListener("click", () => {
+  ALL.forEach(p => visited.add(p.id));
+  save(); render();
 });
 
 document.getElementById("reset").addEventListener("click", () => {
@@ -363,13 +456,19 @@ document.getElementById("reset").addEventListener("click", () => {
 });
 
 document.getElementById("copy").addEventListener("click", async () => {
-  const names = PLACES.filter(p => visited.has(p.id)).map(p => p.name).join("、") || "暂无";
-  const text = `我的旅行含苏量：${document.getElementById("pct").textContent}%（${visited.size}/16）\n去过：${names}\n${location.href}`;
+  const { nc, np, pct } = score();
+  const names = ALL.filter(p => visited.has(p.id)).map(p => p.name).join("、") || "暂无";
+  const text = `我的旅行含苏量：${fmt(pct)}%（核心地 ${nc}/16，途经地 ${np}/16）\n去过：${names}\n${location.href}`;
   const btn = document.getElementById("copy");
   try { await navigator.clipboard.writeText(text); btn.textContent = "已复制"; }
   catch (e) { prompt("复制以下内容：", text); }
   setTimeout(() => btn.textContent = "复制结果", 1500);
 });
+
+// 苏轼生于景祐三年十二月十九日，即公历 1037 年 1 月
+const yearsLeft = 2037 - new Date().getFullYear();
+document.getElementById("countdown").textContent =
+  yearsLeft > 0 ? `，距今还有 ${yearsLeft} 年` : yearsLeft === 0 ? "，就在今年" : "";
 
 render();
 </script>

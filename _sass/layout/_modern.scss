@@ -407,8 +407,8 @@ html[data-theme="dark"] .masthead {
 // Intro on the left, "Spirit of our work" on the right; stacks below 900px.
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  column-gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 3rem;
   row-gap: 2rem;
   align-items: start;
 }

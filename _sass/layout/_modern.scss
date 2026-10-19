@@ -404,6 +404,46 @@ html[data-theme="dark"] .masthead {
   }
 }
 
+// Intro on the left, "Spirit of our work" on the right; stacks below 900px.
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+  align-items: start;
+}
+
+.spirit {
+  padding-top: 0.35rem;
+
+  .page__content & .section-title { margin-bottom: 0.6rem; }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .page__content &__list li {
+    margin: 0;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-2);
+
+    strong {
+      font-weight: 600;
+      color: var(--accent);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
 .home-section {
   padding: 2.5rem 0;
   border-top: 1px solid var(--rule);

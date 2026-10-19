@@ -11,9 +11,22 @@ redirect_from:
 {% include base_path %}
 
 <section class="hero">
-  <p class="hero__eyebrow">Department of Civil and Environmental Engineering · National University of Singapore</p>
-  <h1 class="hero__title">{{ site.title }}</h1>
-  <p class="hero__lead">We use interdisciplinary system modeling to inform decision-making in energy transitions, climate governance, and industrial policy.</p>
+  <div class="hero__main">
+    <p class="hero__eyebrow">Department of Civil and Environmental Engineering · National University of Singapore</p>
+    <h1 class="hero__title">{{ site.title }}</h1>
+    <p class="hero__lead">We use interdisciplinary system modeling to inform decision-making in energy transitions, climate governance, and industrial policy.</p>
+  </div>
+  <aside class="spirit" aria-labelledby="spirit-title">
+    <p class="section-title" id="spirit-title">Spirit of our work</p>
+    <ol class="spirit__list">
+      <li><strong>Big questions.</strong> Grand challenges for sustainability, human welfare, and equity.</li>
+      <li><strong>Years to decades.</strong> Not months, not centuries. Long enough to matter, near enough to act on.</li>
+      <li><strong>Quantitative to qualitative.</strong> Quantitative modeling generates qualitative insights.</li>
+      <li><strong>Mechanism and scale.</strong> What if X? Would Y be a concern?</li>
+      <li><strong>Transformative.</strong> Ideas that set the agenda.</li>
+      <li><strong>Explicit values.</strong> Transparent, open modeling approaches.</li>
+    </ol>
+  </aside>
 </section>
 
 <section class="home-section home-section--first">

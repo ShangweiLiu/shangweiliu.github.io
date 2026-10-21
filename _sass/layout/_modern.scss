@@ -853,6 +853,67 @@ html[data-theme="dark"] .masthead {
   color: var(--accent-warm);
 }
 
+/* Gallery
+   ========================================================================== */
+
+.gallery-year {
+  margin-bottom: 2.75rem;
+}
+
+// Uniform grid: every photo shows as a 3:2 tile; the viewer shows it uncropped.
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.25rem;
+
+  @media (max-width: 900px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+
+  &__item {
+    display: block;   // the theme makes every figure a flex row
+    min-width: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    border-radius: 2px;
+    background: transparent;
+    cursor: zoom-in;
+
+    img,
+    .page__content & img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center top;
+      margin: 0;
+      box-shadow: none;
+      transition: transform 0.35s ease;
+    }
+
+    &:hover img { transform: scale(1.03); }
+  }
+
+  figcaption,
+  .page__content & figcaption {
+    margin-top: 0.6rem;
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+
+  &__date {
+    @extend %mono-label;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--accent-warm);
+  }
+}
+
 /* CV
    ========================================================================== */
 

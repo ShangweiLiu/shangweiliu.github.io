@@ -1,0 +1,29 @@
+---
+title: "Gallery"
+permalink: /gallery/
+layout: single
+wide: true
+hide_footer: true
+---
+
+{% include base_path %}
+
+{% comment %}Photos come from _data/gallery.yml, one section per year. Clicking a photo opens the theme's Magnific Popup viewer (captions from the title attribute).{% endcomment %}
+{% for group in site.data.gallery %}
+<section class="gallery-year">
+  <h2 class="section-title">{{ group.year }}</h2>
+  <div class="gallery">
+    {% for p in group.photos %}
+    <figure class="gallery__item">
+      <a class="gallery__link" href="{{ base_path }}/images/{{ p.image }}" title="{{ p.date }} · {{ p.caption | markdownify | strip_html | strip | escape }}">
+        <img src="{{ base_path }}/images/{{ p.image }}" alt="{{ p.alt | escape }}" loading="lazy">
+      </a>
+      <figcaption>
+        <span class="gallery__date">{{ p.date }}</span>
+        {{ p.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

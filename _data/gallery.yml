@@ -1,0 +1,29 @@
+# Photos on /gallery/, grouped by year, newest first.
+#
+# image:   path under /images/ (put files in images/gallery_photos/, ~1600px wide).
+# date:    shown above the caption, e.g. "October 2026".
+# caption: Markdown is supported.
+
+- year: 2026
+  photos:
+    - image: "gallery_photos/2026-10-nus-sign.jpg"
+      date: "October 2026"
+      caption: "The group at the #NUS sign on campus. From left: Xiao Li, Xi Zeng, Shangwei Liu, and Longquan Li."
+      alt: "Four group members giving a thumbs-up in front of a large #NUS sign"
+
+    - image: "gallery_photos/2026-10-photo-booth.jpg"
+      date: "October 2026"
+      caption: "Four takes in the photo booth. We never quite figured out the poses."
+      alt: "Four-frame photo-booth strip of group members"
+
+    - image: "gallery_photos/2026-08-dinner-cui-can.jpg"
+      date: "August 2026"
+      caption: "Group dinner with Cui Can, Assistant Professor at Singapore Management University (SMU)."
+      alt: "Group members and a guest smiling around a restaurant table"
+
+- year: 2024
+  photos:
+    - image: "gallery_photos/2024-01-phd-defense.jpg"
+      date: "January 2024"
+      caption: "Shangwei's PhD defense at Princeton, with advisor Denise Mauzerall (left) and committee member Jesse Jenkins (right). Joining online: committee members Valerie Karplus and Fabian Wagner, and friend Minghao Qiu."
+      alt: "Shangwei presenting in front of a screen of remote attendees, between two faculty members"

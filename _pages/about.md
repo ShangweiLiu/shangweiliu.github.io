@@ -29,7 +29,15 @@ redirect_from:
   </aside>
 </section>
 
-<section class="home-section home-section--first">
+<section class="cta">
+  <div>
+    <h2>Join the group</h2>
+    <p>We are recruiting PhD students (Fall 2027), postdocs, and visiting scholars.</p>
+  </div>
+  <a class="btn-pill btn-pill--accent" href="{{ base_path }}/join-us/">See open positions</a>
+</section>
+
+<section class="home-section home-section--first" style="margin-top:0">
   <h2 class="section-title">Research</h2>
   <!-- Photos live in images/research/ (CC0 / public domain, from Wikimedia Commons); replace a file to change its picture. -->
   <div class="card-grid card-grid--3">
@@ -81,12 +89,4 @@ redirect_from:
     {% endfor %}
   </div>
   <p><a class="more-link" href="{{ base_path }}/publication/all/">All publications →</a></p>
-</section>
-
-<section class="cta">
-  <div>
-    <h2>Join the group</h2>
-    <p>We are recruiting PhD students (Fall 2027), postdocs, and visiting scholars.</p>
-  </div>
-  <a class="btn-pill btn-pill--accent" href="{{ base_path }}/join-us/">See open positions</a>
 </section>

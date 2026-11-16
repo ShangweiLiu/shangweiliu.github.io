@@ -5,11 +5,11 @@ layout: single
 hide_footer: true
 ---
 
-We are ramping up our research on energy system modeling, technological innovation, and climate impacts. Stay tuned!
-
 <div class="notice-box" markdown="1">
 If you are interested in joining us, please email Dr. Shangwei Liu at [shangweiliu@nus.edu.sg](mailto:shangweiliu@nus.edu.sg) with your CV attached. Please use the subject line format: **"Position + Current Affiliation + Name"** (e.g., "PhD – NUS – Jane Doe").
 </div>
+
+We are ramping up our research on energy system modeling, technological innovation, and climate impacts. Stay tuned!
 
 <div class="card card--row" markdown="1">
 ### Ph.D. Students
@@ -34,7 +34,9 @@ If you are interested, feel free to reach out early with your CV.
 <div class="card card--row" markdown="1">
 ### Postdoctoral Researchers
 
-We welcome applications from candidates who are applying for or interested in the following fellowships:
+We anticipate a postdoctoral opening to start in 2027. Candidates with expertise in energy system modeling, capacity expansion modeling, optimization, or nuclear power are especially encouraged to get in touch.
+
+We also welcome applications from candidates who are applying for or interested in the following fellowships:
 
 - [SG Academies South-East Asia Fellowship (SASEAF) Programme](https://snas.org.sg/saseaf)
 - [NUS Fellows Programme (Southeast Asia)](https://research.nus.edu.sg/nusri/nus-fellows-programme/)

@@ -34,7 +34,7 @@ If you are interested, feel free to reach out early with your CV.
 <div class="card card--row" markdown="1">
 ### Postdoctoral Researchers
 
-We anticipate a postdoctoral opening to start in 2027. Candidates with expertise in energy system modeling, capacity expansion modeling, optimization, or nuclear power are especially encouraged to get in touch.
+We anticipate a postdoctoral opening to start in 2027. Candidates with expertise in nuclear power, carbon market design, energy system modeling, capacity expansion modeling, optimization, or industrial decarbonization are especially encouraged to get in touch.
 
 We also welcome applications from candidates who are applying for or interested in the following fellowships:
 
